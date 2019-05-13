@@ -36,8 +36,6 @@ async function main() {
     LOGIN_COL,
   } = process.env
 
-  tools.log.info('GOOGLE_SHEETS_API_KEY:')
-  tools.log.info(JSON.stringify(GOOGLE_SHEETS_API_KEY))
   tools.log.info('Payload:')
   tools.log.info(JSON.stringify(tools.context.payload))
 
@@ -66,4 +64,4 @@ async function main() {
 }
 
 // Run the main function
-main().catch(err => tools.exit.failure(err.message))
+main().catch(err => tools.exit.failure(err.stack))
