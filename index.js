@@ -24,6 +24,8 @@ const tools = new Toolkit({
   secrets: ['GOOGLE_SHEETS_API_KEY', ...requiredNonSecretEnvVars],
 })
 
+tools.log.info('Welcome!')
+
 // Wrap into an `async` function so we can using `await`
 async function main() {
   const {
