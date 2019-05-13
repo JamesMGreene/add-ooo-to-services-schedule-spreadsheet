@@ -25,8 +25,6 @@ const tools = new Toolkit({
 })
 
 tools.log.info('Welcome!')
-tools.exit.success('We did it!')
-
 
 // Wrap into an `async` function so we can using `await`
 async function main() {
