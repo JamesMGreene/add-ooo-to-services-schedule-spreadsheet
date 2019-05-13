@@ -1,6 +1,6 @@
 // Userland modules
 const { Toolkit } = require('actions-toolkit')
-const { google } = require('googleapis')
+//const { google } = require('googleapis')
 
 // Test spreadsheet = 1GoMPfZBppYwKjdu_GR5ZCGhNBgocPfhvvSq4W6S3c2I
 // Real spreadsheet = 1jaLzkVG3BmV2fPjcKoWPeq6kRXB9Lcpqk28r-DcPeZo
@@ -10,16 +10,16 @@ const { google } = require('googleapis')
 // process.env.DATE_ROW = '1'
 // process.env.LOGIN_COL = 'B'
 
-const requiredNonSecretEnvVars = [
-  'SPREADSHEET_ID',
-  'SHEET_NAME',
-  'DATE_ROW',
-  'LOGIN_COL',
-]
+// const requiredNonSecretEnvVars = [
+//   'SPREADSHEET_ID',
+//   'SHEET_NAME',
+//   'DATE_ROW',
+//   'LOGIN_COL',
+// ]
 
 const tools = new Toolkit({
   // If the event received is not included, Toolkit will exit neutrally
-  event: ['issues.opened'] //,
+  //event: ['issues.opened'] //,
   // If the following secrets are not present, Toolkit will exit with a failure
   //secrets: ['GOOGLE_SHEETS_API_KEY', ...requiredNonSecretEnvVars],
 })
