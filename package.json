@@ -4,13 +4,15 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./index.js",
-    "test": "jest"
+    "lint": "prettier --single-quote --no-semi --trailing-comma es5 --write \"*.js\"",
+    "test": "npm run lint && jest"
   },
   "dependencies": {
     "actions-toolkit": "^2.0.0",
     "googleapis": "^39.2.0"
   },
   "devDependencies": {
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "prettier": "^1.17.1"
   }
 }
