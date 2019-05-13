@@ -46,7 +46,7 @@ async function main() {
     auth: GOOGLE_SHEETS_API_KEY,
   })
 
-  const [dateRowRes, loginColRes] = await Promise.all(
+  const [dateRowRes, loginColRes] = await Promise.all([
     sheets.spreadsheets.values.get({
       spreadsheetId: SPREADSHEET_ID,
       range: `'${SHEET_NAME}'!${DATE_ROW}:${DATE_ROW}`,
@@ -55,7 +55,7 @@ async function main() {
       spreadsheetId: SPREADSHEET_ID,
       range: `'${SHEET_NAME}'!${LOGIN_COL}:${LOGIN_COL}`,
     })
-  )
+  ])
 
   tools.log.info('Date row res:')
   tools.log.info(JSON.stringify(dateRowRes))
