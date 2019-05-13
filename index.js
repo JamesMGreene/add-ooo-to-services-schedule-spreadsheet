@@ -39,19 +39,18 @@ async function main() {
   tools.log.info('Payload:')
   tools.log.info(JSON.stringify(tools.context.payload))
 
-  const sheets = google.sheets({
-    version: 'v4',
-    auth: GOOGLE_SHEETS_API_KEY,
-  })
+  const sheets = google.sheets('v4')
 
   const [dateRowRes, loginColRes] = await Promise.all([
     sheets.spreadsheets.values.get({
       spreadsheetId: SPREADSHEET_ID,
       range: `'${SHEET_NAME}'!${DATE_ROW}:${DATE_ROW}`,
+      auth: GOOGLE_SHEETS_API_KEY
     }),
     sheets.spreadsheets.values.get({
       spreadsheetId: SPREADSHEET_ID,
       range: `'${SHEET_NAME}'!${LOGIN_COL}:${LOGIN_COL}`,
+      auth: GOOGLE_SHEETS_API_KEY
     })
   ])
 
