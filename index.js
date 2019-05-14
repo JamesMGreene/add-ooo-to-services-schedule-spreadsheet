@@ -33,6 +33,88 @@ const tools = new Toolkit({
 
 tools.log.info('Welcome!')
 
+const dateCellMatch = /^\s*(\d{1,2})\s*\/\s*(\d{1,2})\s*\/\s*(\d{4})\s*$/
+
+const hexAlphaMap = {
+  '0': 'A',
+  '1': 'B',
+  '2': 'C',
+  '3': 'D',
+  '4': 'E',
+  '5': 'F',
+  '6': 'G',
+  '7': 'H',
+  '8': 'I',
+  '9': 'J',
+  'a': 'K',
+  'b': 'L',
+  'c': 'M',
+  'd': 'N',
+  'e': 'O',
+  'f': 'P',
+  'g': 'Q',
+  'h': 'R',
+  'i': 'S',
+  'j': 'T',
+  'k': 'U',
+  'l': 'V',
+  'm': 'W',
+  'n': 'X',
+  'o': 'Y',
+  'p': 'Z'
+}
+function mapColumnIndexToColumnName (i) {
+  const hexAlphaArray = i.toString(26).split('')
+  const alphaArray = hexAlphaArray.map(hexAlpha => hexAlphaMap[hexAlpha])
+  const columnName = alphaArray.join('')
+  return columnName
+}
+
+function mapRowIndexToRowName (i) {
+  return (i + 1).toString()
+}
+
+function dateCellMapper (value, i) {
+  const col = mapColumnIndexToColumnName(i)
+  const trimmedValue = value.trim()
+
+  const defaultVal = { value: null, col }
+
+  if (!trimmedValue || !dateCellMatch.test(trimmedValue)) return defaultVal
+
+  const [$0, month, day, year] = trimmedValue.match(dateCellMatch)
+  return {
+    value: { year, month, day },
+    col
+  }
+}
+
+const loginValuesToIgnore = ['TO BE HIRED', 'Comms']
+
+const loginCellMapper = (function loginCellMapperGen () {
+  let hitLegend = false
+  return function loginCellMapper ([value], i) {
+    const row = mapRowIndexToRowName(i)
+    const trimmedValue = value.trim()
+
+    const defaultVal = { value: null, row }
+
+    if (hitLegend) return defaultVal
+
+    if (!trimmedValue || loginValuesToIgnore.includes(trimmedValue)) return defaultVal
+
+    if (trimmedValue === 'Legend') {
+      hitLegend = true
+      return defaultVal
+    }
+
+    const [login] = trimmedValue.split(/\s/, 1)
+    return {
+      value: { login },
+      row
+    }
+}())
+
 // Wrap into an `async` function so we can using `await`
 async function main() {
   const {
@@ -72,10 +154,11 @@ async function main() {
     })
   ])
 
+
   tools.log.info('Date row res:')
-  tools.log.info(JSON.stringify(dateRowRes))
+  tools.log.info(JSON.stringify(dateRowRes.data.values.map(dateCellMapper)))
   tools.log.info('Login column res:')
-  tools.log.info(JSON.stringify(loginColRes))
+  tools.log.info(JSON.stringify(loginColRes.data.values.map(loginCellMapper)))
 
   tools.exit.success('We did it!')
 }
