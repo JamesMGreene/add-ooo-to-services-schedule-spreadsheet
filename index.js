@@ -82,18 +82,19 @@ async function main() {
 
   const sheets = google.sheets('v4')
 
-  const [dateRowRes, loginColRes] = await Promise.all([
-    sheets.spreadsheets.values.get({
-      spreadsheetId: SPREADSHEET_ID,
-      range: `'${SHEET_NAME}'!${DATE_ROW}:${DATE_ROW}`,
-      auth: jwtClient
-    }),
-    sheets.spreadsheets.values.get({
-      spreadsheetId: SPREADSHEET_ID,
-      range: `'${SHEET_NAME}'!${LOGIN_COL}:${LOGIN_COL}`,
-      auth: jwtClient
-    })
-  ])
+  const batchGetRes = sheets.spreadsheets.values.batchGet({
+    auth: jwtClient,
+    spreadsheetId: SPREADSHEET_ID,
+    ranges: [
+      `'${SHEET_NAME}'!${DATE_ROW}:${DATE_ROW}`,
+      `'${SHEET_NAME}'!${LOGIN_COL}:${LOGIN_COL}`
+    ]
+  })
+
+  tools.log.info('Batch response:')
+  tools.log.info(JSON.stringify(batchGetRes))
+
+  tools.exit.neutral('HALT EARLY')
 
   const dateColCells = dateRowRes.data.values[0].map(dateColumnMapper)
   const loginRowCells = loginColRes.data.values.map(loginRowMapper)
@@ -133,6 +134,12 @@ async function main() {
   tools.log.info(JSON.stringify(dateColumnCellForStart))
   tools.log.info('Found column cell for end date!')
   tools.log.info(JSON.stringify(dateColumnCellForEnd))
+
+  // const updateRes = await sheets.spreadsheets.batchUpdate({
+  //   auth: jwtClient,
+  //   spreadsheetId: SPREADSHEET_ID,
+  //   range: `'${SHEET_NAME}'!${DATE_ROW}:${DATE_ROW}`
+  // })
 
   tools.exit.success('We did it!')
 }
