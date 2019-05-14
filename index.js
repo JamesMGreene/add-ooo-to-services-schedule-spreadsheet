@@ -74,9 +74,9 @@ function mapRowIndexToRowName(i) {
   return (i + 1).toString()
 }
 
-function dateCellMapper(value, i) {
+function dateColMapper(value, i) {
   const col = mapColumnIndexToColumnName(i)
-  const trimmedValue = value.trim()
+  const trimmedValue = (value || '').trim()
 
   const defaultVal = { value: null, col }
 
@@ -91,11 +91,11 @@ function dateCellMapper(value, i) {
 
 const loginValuesToIgnore = ['TO BE HIRED', 'Comms']
 
-const loginCellMapper = (function loginCellMapperGen() {
+const loginRowMapper = (function loginRowMapperGen() {
   let hitLegend = false
-  return function loginCellMapper([value], i) {
+  return function loginRowMapper([value], i) {
     const row = mapRowIndexToRowName(i)
-    const trimmedValue = value.trim()
+    const trimmedValue = (value || '').trim()
 
     const defaultVal = { value: null, row }
 
@@ -157,9 +157,9 @@ async function main() {
   ])
 
   tools.log.info('Date row res:')
-  tools.log.info(JSON.stringify(dateRowRes.data.values.map(dateCellMapper)))
+  tools.log.info(JSON.stringify(dateRowRes.data.values[0].map(dateColMapper)))
   tools.log.info('Login column res:')
-  tools.log.info(JSON.stringify(loginColRes.data.values.map(loginCellMapper)))
+  tools.log.info(JSON.stringify(loginColRes.data.values.map(loginRowMapper)))
 
   tools.exit.success('We did it!')
 }
