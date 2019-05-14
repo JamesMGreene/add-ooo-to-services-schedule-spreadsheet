@@ -6,7 +6,7 @@ const loginValuesToIgnore = ['to be hired', 'comms']
 function loginRowMapperGenerator() {
   let hitLegend = false
 
-  return function loginRowMapper([value], i) {
+  return function loginRowMapper(value, i) {
     // Reset the `hitLegend` boolean so this mapper function can be reused (just not in parallel)
     if (i === 0) {
       hitLegend = false

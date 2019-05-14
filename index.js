@@ -82,19 +82,20 @@ async function main() {
 
   const sheets = google.sheets('v4')
 
-  const batchGetRes = await sheets.spreadsheets.values.batchGet({
-    auth: jwtClient,
-    spreadsheetId: SPREADSHEET_ID,
-    ranges: [
-      `'${SHEET_NAME}'!${DATE_ROW}:${DATE_ROW}`,
-      `'${SHEET_NAME}'!${LOGIN_COL}:${LOGIN_COL}`
-    ]
-  })
-
-  tools.log.info('Batch response:')
-  tools.log.info(JSON.stringify(batchGetRes))
-
-  tools.exit.neutral('HALT EARLY')
+  const [dateRowRes, loginColRes] = await Promise.all([
+    sheets.spreadsheets.values.get({
+      auth: jwtClient,
+      spreadsheetId: SPREADSHEET_ID,
+      range: `'${SHEET_NAME}'!${DATE_ROW}:${DATE_ROW}`,
+      majorDimension: 'ROWS'
+    }),
+    sheets.spreadsheets.values.get({
+      auth: jwtClient,
+      spreadsheetId: SPREADSHEET_ID,
+      range: `'${SHEET_NAME}'!${LOGIN_COL}:${LOGIN_COL}`,
+      majorDimension: 'COLUMNS'
+    })
+  ])
 
   const dateColCells = dateRowRes.data.values[0].map(dateColumnMapper)
   const loginRowCells = loginColRes.data.values.map(loginRowMapper)
