@@ -5,7 +5,7 @@ const dateColumnMapper = require('./src/date-column-mapper')
 const loginRowMapperGenerator = require('./src/login-row-mapper-generator')
 const areDatesEqual = require('./src/are-dates-equal')
 
-// IMPORTANT: This mapper is a one-time use
+// IMPORTANT: This mapper can only be used serially
 const loginRowMapper = loginRowMapperGenerator()
 
 // Test spreadsheet = 1GoMPfZBppYwKjdu_GR5ZCGhNBgocPfhvvSq4W6S3c2I
@@ -30,7 +30,9 @@ const tools = new Toolkit({
   // If the following environment variables are not present,
   // Toolkit will exit with a failure
   secrets: [
+    // The email address of a GCP Service Account with access to the spreadsheet
     'GOOGLE_API_CLIENT_EMAIL',
+    // The private key of a GCP Service Account with access to the spreadsheet
     'GOOGLE_API_PRIVATE_KEY',
     ...requiredNonSecretEnvVars
   ]
@@ -55,8 +57,8 @@ async function main() {
   const issueTitleLower = issueTitle.toLowerCase()
   const issueBody = issue.body
   const issueUrl = issue.html_url
-  const issueStartDate = ''
-  const issueEndDate = ''
+  const oooStartDate = ''
+  const oooEndDate = ''
 
   // Exit early neutrally if the issue is not an OOO issue
   if (
@@ -116,14 +118,14 @@ async function main() {
   tools.log.info(JSON.stringify(loginRowCellForIssueCreator))
 
   const dateColumnCellForStart = dateColCells.find(c =>
-    areDatesEqual(c.value, issueStartDate)
+    areDatesEqual(c.value, oooStartDate)
   )
-  const dateColumnCellForEnd = areDatesEqual(issueStartDate, issueEndDate)
+  const dateColumnCellForEnd = areDatesEqual(oooStartDate, oooEndDate)
     ? dateColumnCellForStart
-    : dateColCells.find(c => areDatesEqual(c.value, issueEndDate))
+    : dateColCells.find(c => areDatesEqual(c.value, oooEndDate))
   if (!dateColumnCellForStart || !dateColumnCellForEnd) {
     tools.exit.failure(
-      `Could not find column cell matching issue date range (${oooStartDate} - ${oooEndDate}) for issue: ${issueUrl}`
+      `Could not find column cells matching issue date range (${oooStartDate} - ${oooEndDate}) for issue: ${issueUrl}`
     )
   }
 
