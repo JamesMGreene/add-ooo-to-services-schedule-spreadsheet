@@ -97,6 +97,11 @@ async function main() {
     })
   ])
 
+  tools.log.info('Date res:')
+  tools.log.info(JSON.stringify(dateRowRes))
+  tools.log.info('Login res:')
+  tools.log.info(JSON.stringify(loginColRes))
+
   const dateColCells = dateRowRes.data.values[0].map(dateColumnMapper)
   const loginRowCells = loginColRes.data.values.map(loginRowMapper)
 
