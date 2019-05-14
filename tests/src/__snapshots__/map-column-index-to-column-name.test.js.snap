@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`map-column-index-to-column-name throws for input over the maximum allowed 1`] = `"Unexpectedly high column index: 702 (maximum allowed: 701)"`;
