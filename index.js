@@ -14,7 +14,7 @@ const requiredNonSecretEnvVars = [
   'SPREADSHEET_ID',
   'SHEET_NAME',
   'DATE_ROW',
-  'LOGIN_COL',
+  'LOGIN_COL'
 ]
 
 const tools = new Toolkit({
@@ -28,7 +28,7 @@ const tools = new Toolkit({
     'GOOGLE_API_CLIENT_EMAIL',
     'GOOGLE_API_PRIVATE_KEY',
     ...requiredNonSecretEnvVars
-  ],
+  ]
 })
 
 tools.log.info('Welcome!')
@@ -46,35 +46,35 @@ const hexAlphaMap = {
   '7': 'H',
   '8': 'I',
   '9': 'J',
-  'a': 'K',
-  'b': 'L',
-  'c': 'M',
-  'd': 'N',
-  'e': 'O',
-  'f': 'P',
-  'g': 'Q',
-  'h': 'R',
-  'i': 'S',
-  'j': 'T',
-  'k': 'U',
-  'l': 'V',
-  'm': 'W',
-  'n': 'X',
-  'o': 'Y',
-  'p': 'Z'
+  a: 'K',
+  b: 'L',
+  c: 'M',
+  d: 'N',
+  e: 'O',
+  f: 'P',
+  g: 'Q',
+  h: 'R',
+  i: 'S',
+  j: 'T',
+  k: 'U',
+  l: 'V',
+  m: 'W',
+  n: 'X',
+  o: 'Y',
+  p: 'Z'
 }
-function mapColumnIndexToColumnName (i) {
+function mapColumnIndexToColumnName(i) {
   const hexAlphaArray = i.toString(26).split('')
   const alphaArray = hexAlphaArray.map(hexAlpha => hexAlphaMap[hexAlpha])
   const columnName = alphaArray.join('')
   return columnName
 }
 
-function mapRowIndexToRowName (i) {
+function mapRowIndexToRowName(i) {
   return (i + 1).toString()
 }
 
-function dateCellMapper (value, i) {
+function dateCellMapper(value, i) {
   const col = mapColumnIndexToColumnName(i)
   const trimmedValue = value.trim()
 
@@ -91,9 +91,9 @@ function dateCellMapper (value, i) {
 
 const loginValuesToIgnore = ['TO BE HIRED', 'Comms']
 
-const loginCellMapper = (function loginCellMapperGen () {
+const loginCellMapper = (function loginCellMapperGen() {
   let hitLegend = false
-  return function loginCellMapper ([value], i) {
+  return function loginCellMapper([value], i) {
     const row = mapRowIndexToRowName(i)
     const trimmedValue = value.trim()
 
@@ -101,7 +101,8 @@ const loginCellMapper = (function loginCellMapperGen () {
 
     if (hitLegend) return defaultVal
 
-    if (!trimmedValue || loginValuesToIgnore.includes(trimmedValue)) return defaultVal
+    if (!trimmedValue || loginValuesToIgnore.includes(trimmedValue))
+      return defaultVal
 
     if (trimmedValue === 'Legend') {
       hitLegend = true
@@ -113,7 +114,8 @@ const loginCellMapper = (function loginCellMapperGen () {
       value: { login },
       row
     }
-}())
+  }
+})()
 
 // Wrap into an `async` function so we can using `await`
 async function main() {
@@ -123,7 +125,7 @@ async function main() {
     SPREADSHEET_ID,
     SHEET_NAME,
     DATE_ROW,
-    LOGIN_COL,
+    LOGIN_COL
   } = process.env
 
   tools.log.info('Payload:')
@@ -153,7 +155,6 @@ async function main() {
       auth: jwtClient
     })
   ])
-
 
   tools.log.info('Date row res:')
   tools.log.info(JSON.stringify(dateRowRes.data.values.map(dateCellMapper)))
