@@ -82,7 +82,7 @@ async function main() {
 
   const sheets = google.sheets('v4')
 
-  const batchGetRes = sheets.spreadsheets.values.batchGet({
+  const batchGetRes = await sheets.spreadsheets.values.batchGet({
     auth: jwtClient,
     spreadsheetId: SPREADSHEET_ID,
     ranges: [
