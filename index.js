@@ -1,11 +1,16 @@
 // Userland modules
 const { Toolkit } = require('actions-toolkit')
 const { google } = require('googleapis')
+const dateColumnMapper = require('./src/date-column-mapper')
+const loginRowMapperGenerator = require('./src/login-row-mapper-generator')
+const areDatesEqual = require('./src/are-dates-equal')
+
+// IMPORTANT: This mapper is a one-time use
+const loginRowMapper = loginRowMapperGenerator()
 
 // Test spreadsheet = 1GoMPfZBppYwKjdu_GR5ZCGhNBgocPfhvvSq4W6S3c2I
 // Real spreadsheet = 1jaLzkVG3BmV2fPjcKoWPeq6kRXB9Lcpqk28r-DcPeZo
 // process.env.SPREADSHEET_ID = '1GoMPfZBppYwKjdu_GR5ZCGhNBgocPfhvvSq4W6S3c2I'
-
 // process.env.SHEET_NAME = '2019-neworg'
 // process.env.DATE_ROW = '1'
 // process.env.LOGIN_COL = 'B'
@@ -33,67 +38,6 @@ const tools = new Toolkit({
 
 tools.log.info('Welcome!')
 
-const dateCellMatch = /^\s*(\d{1,2})\s*\/\s*(\d{1,2})\s*\/\s*(\d{4})\s*$/
-
-const hexAlphaArray = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
-
-function mapColumnIndexToColumnName(i) {
-  const columnNameArray = []
-  const higher = Math.floor(i / 26)
-  const lower = i % 26
-  if (higher >= 27) throw new TypeError(`Unexpectedly high column index: ${i}`)
-  if (higher < 1) return hexAlphaArray[lower]
-
-  return [higher - 1, lower].map(j => hexAlphaArray[j]).join('')
-}
-
-function mapRowIndexToRowName(i) {
-  return (i + 1).toString()
-}
-
-function dateColMapper(value, i) {
-  const col = mapColumnIndexToColumnName(i)
-  const trimmedValue = (value || '').trim()
-
-  const defaultVal = { value: null, col }
-
-  if (!trimmedValue || !dateCellMatch.test(trimmedValue)) return defaultVal
-
-  const [$0, month, day, year] = trimmedValue.match(dateCellMatch)
-  return {
-    value: { year, month, day },
-    col
-  }
-}
-
-const loginValuesToIgnore = ['TO BE HIRED', 'Comms']
-
-const loginRowMapper = (function loginRowMapperGen() {
-  let hitLegend = false
-  return function loginRowMapper([value], i) {
-    const row = mapRowIndexToRowName(i)
-    const trimmedValue = (value || '').trim()
-
-    const defaultVal = { value: null, row }
-
-    if (hitLegend) return defaultVal
-
-    if (!trimmedValue || loginValuesToIgnore.includes(trimmedValue))
-      return defaultVal
-
-    if (trimmedValue === 'Legend') {
-      hitLegend = true
-      return defaultVal
-    }
-
-    const [login] = trimmedValue.split(/\s/, 1)
-    return {
-      value: { login },
-      row
-    }
-  }
-})()
-
 // Wrap into an `async` function so we can using `await`
 async function main() {
   const {
@@ -105,8 +49,24 @@ async function main() {
     LOGIN_COL
   } = process.env
 
-  tools.log.info('Payload:')
-  tools.log.info(JSON.stringify(tools.context.payload))
+  const { issue } = tools.context.payload
+  const issueCreatorLogin = issue.user.login.toLowerCase()
+  const issueTitle = issue.title
+  const issueTitleLower = issueTitle.toLowerCase()
+  const issueBody = issue.body
+  const issueUrl = issue.html_url
+  const issueStartDate = ''
+  const issueEndDate = ''
+
+  // Exit early neutrally if the issue is not an OOO issue
+  if (
+    !(
+      issueTitleLower.includes('ooo') ||
+      issueTitleLower.includes('out of office')
+    )
+  ) {
+    tools.exit.neutral('This is not an OOO issue')
+  }
 
   // Configure a JWT auth client using the Service Account
   const jwtClient = new google.auth.JWT(
@@ -133,10 +93,44 @@ async function main() {
     })
   ])
 
-  tools.log.info('Date row res:')
-  tools.log.info(JSON.stringify(dateRowRes.data.values[0].map(dateColMapper)))
-  tools.log.info('Login column res:')
-  tools.log.info(JSON.stringify(loginColRes.data.values.map(loginRowMapper)))
+  const dateColCells = dateRowRes.data.values[0].map(dateColumnMapper)
+  const loginRowCells = loginColRes.data.values.map(loginRowMapper)
+
+  tools.log.info('Payload:')
+  tools.log.info(JSON.stringify(tools.context.payload))
+  tools.log.info('Date column cells:')
+  tools.log.info(JSON.stringify(dateColCells))
+  tools.log.info('Login row cells:')
+  tools.log.info(JSON.stringify(loginRowCells))
+
+  const loginRowCellForIssueCreator = loginRowCells.find(
+    c => c.value.login === issueCreatorLogin
+  )
+  if (!loginRowCellForIssueCreator) {
+    tools.exit.failure(
+      `Could not find row cell matching issue creator's login "${issueCreatorLogin}" for issue: ${issueUrl}`
+    )
+  }
+
+  tools.log.info('Found row cell for issue creator!')
+  tools.log.info(JSON.stringify(loginRowCellForIssueCreator))
+
+  const dateColumnCellForStart = dateColCells.find(c =>
+    areDatesEqual(c.value, issueStartDate)
+  )
+  const dateColumnCellForEnd = areDatesEqual(issueStartDate, issueEndDate)
+    ? dateColumnCellForStart
+    : dateColCells.find(c => areDatesEqual(c.value, issueEndDate))
+  if (!dateColumnCellForStart || !dateColumnCellForEnd) {
+    tools.exit.failure(
+      `Could not find column cell matching issue date range (${oooStartDate} - ${oooEndDate}) for issue: ${issueUrl}`
+    )
+  }
+
+  tools.log.info('Found column cell for start date!')
+  tools.log.info(JSON.stringify(dateColumnCellForStart))
+  tools.log.info('Found column cell for end date!')
+  tools.log.info(JSON.stringify(dateColumnCellForEnd))
 
   tools.exit.success('We did it!')
 }
