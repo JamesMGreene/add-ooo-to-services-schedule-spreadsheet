@@ -35,39 +35,16 @@ tools.log.info('Welcome!')
 
 const dateCellMatch = /^\s*(\d{1,2})\s*\/\s*(\d{1,2})\s*\/\s*(\d{4})\s*$/
 
-const hexAlphaMap = {
-  '0': 'A',
-  '1': 'B',
-  '2': 'C',
-  '3': 'D',
-  '4': 'E',
-  '5': 'F',
-  '6': 'G',
-  '7': 'H',
-  '8': 'I',
-  '9': 'J',
-  'a': 'K',
-  'b': 'L',
-  'c': 'M',
-  'd': 'N',
-  'e': 'O',
-  'f': 'P',
-  'g': 'Q',
-  'h': 'R',
-  'i': 'S',
-  'j': 'T',
-  'k': 'U',
-  'l': 'V',
-  'm': 'W',
-  'n': 'X',
-  'o': 'Y',
-  'p': 'Z'
-}
+const hexAlphaArray = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+
 function mapColumnIndexToColumnName(i) {
-  const hexAlphaArray = i.toString(26).split('')
-  const alphaArray = hexAlphaArray.map(hexAlpha => hexAlphaMap[hexAlpha])
-  const columnName = alphaArray.join('')
-  return columnName
+  const columnNameArray = []
+  const higher = Math.floor(i / 26)
+  const lower = i % 26
+  if (higher >= 27) throw new TypeError(`Unexpectedly high column index: ${i}`)
+  if (higher < 1) return hexAlphaArray[lower]
+
+  return [higher - 1, lower].map(j => hexAlphaArray[j]).join('')
 }
 
 function mapRowIndexToRowName(i) {
