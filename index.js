@@ -108,7 +108,7 @@ async function main() {
   tools.log.info(JSON.stringify(loginRowCells))
 
   const loginRowCellForIssueCreator = loginRowCells.find(
-    c => c.value.login === issueCreatorLogin
+    c => c.value && c.value.login === issueCreatorLogin
   )
   if (!loginRowCellForIssueCreator) {
     tools.exit.failure(
@@ -119,17 +119,20 @@ async function main() {
   tools.log.info('Found row cell for issue creator!')
   tools.log.info(JSON.stringify(loginRowCellForIssueCreator))
 
-  const dateColumnCellForStart = dateColCells.find(c =>
+  const dateColumnCellForStartIndex = dateColCells.findIndex(c =>
     areDatesEqual(c.value, oooStartDate)
   )
-  const dateColumnCellForEnd = areDatesEqual(oooStartDate, oooEndDate)
-    ? dateColumnCellForStart
-    : dateColCells.find(c => areDatesEqual(c.value, oooEndDate))
-  if (!dateColumnCellForStart || !dateColumnCellForEnd) {
+  const dateColumnCellForEndIndex = areDatesEqual(oooStartDate, oooEndDate)
+    ? dateColumnCellForStartIndex
+    : dateColCells.findIndex(c => areDatesEqual(c.value, oooEndDate))
+
+  if (dateColumnCellForStartIndex === -1 || dateColumnCellForEndIndex === -1) {
     tools.exit.failure(
       `Could not find column cells matching issue date range (${oooStartDate} - ${oooEndDate}) for issue: ${issueUrl}`
     )
   }
+
+  const dateColumnCellForStart = dateColCells[dateColumnCellForStartIndex]
 
   tools.log.info('Found column cell for start date!')
   tools.log.info(JSON.stringify(dateColumnCellForStart))
@@ -139,7 +142,15 @@ async function main() {
   // const updateRes = await sheets.spreadsheets.batchUpdate({
   //   auth: jwtClient,
   //   spreadsheetId: SPREADSHEET_ID,
-  //   range: `'${SHEET_NAME}'!${DATE_ROW}:${DATE_ROW}`
+  //   // requestBody or resource? The API docs disagree.
+  //   resource: {
+  //     // A list of updates to apply to the spreadsheet.
+  //     // Requests will be applied in the order they are specified.
+  //     // If any request is not valid, no requests will be applied.
+  //     requests: [
+  //       // ?
+  //     ]
+  //   }
   // })
 
   tools.exit.success('We did it!')
