@@ -99,8 +99,7 @@ async function main() {
   const withGridDataRes = await sheets.spreadsheets.get({
     auth: jwtClient,
     spreadsheetId: SPREADSHEET_ID,
-    range: `'${SHEET_NAME}'!${DATE_ROW}:${DATE_ROW}`,
-    majorDimension: 'ROWS',
+    ranges: [`'${SHEET_NAME}'!${DATE_ROW}:${DATE_ROW}`],
     includeGridData: true
   })
 
