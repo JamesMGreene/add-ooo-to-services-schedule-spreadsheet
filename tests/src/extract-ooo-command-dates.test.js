@@ -16,26 +16,12 @@ const JAN_14_2020 = {
 }
 
 describe('extract-ooo-command-dates', () => {
-  let originalTZ
-
   beforeEach(() => {
-    // Save for later
-    originalTZ = process.env.TZ
-
-    // Use UTC for for all Date parsing
-    process.env.TZ = 'UTC'
-
     MockDate.set('5/15/2019', 0)
   })
 
   afterEach(() => {
     MockDate.reset()
-
-    // Restore
-    delete process.env.TZ
-    if (originalTZ) {
-      process.env.TZ = originalTZ
-    }
   })
 
   it('returns null for a comment not containing any command', () => {

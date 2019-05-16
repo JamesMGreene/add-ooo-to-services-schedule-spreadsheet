@@ -1,6 +1,3 @@
-// Use UTC for for all Date parsing
-process.env.TZ = 'UTC'
-
 // Userland modules
 const { Toolkit } = require('actions-toolkit')
 const { google } = require('googleapis')
