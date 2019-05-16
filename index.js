@@ -159,19 +159,26 @@ async function main() {
   )
   tools.log.info(JSON.stringify(weekdayColumnCellsInRange))
 
-  // const updateRes = await sheets.spreadsheets.batchUpdate({
-  //   auth: jwtClient,
-  //   spreadsheetId: SPREADSHEET_ID,
-  //   // requestBody or resource? The API docs disagree.
-  //   resource: {
-  //     // A list of updates to apply to the spreadsheet.
-  //     // Requests will be applied in the order they are specified.
-  //     // If any request is not valid, no requests will be applied.
-  //     requests: [
-  //       // ?
-  //     ]
-  //   }
-  // })
+  const cellValue = `=HYPERLINK("${issueUrl}", "OOO")`
+  const updateValueRequests = weekdayColumnCellsInRange.map(dateColumnCell => {
+    return {
+      range: `${loginRowCellForIssueCreator.row}${dateColumnCell.col}`,
+      majorDimension: 'ROWS',
+      values: [[cellValue]]
+    }
+  })
+
+  const updateValuesRes = await sheets.spreadsheets.values.batchUpdate({
+    auth: jwtClient,
+    spreadsheetId: SPREADSHEET_ID,
+    resource: {
+      valueInputOption: 'RAW',
+      data: updateValueRequests
+    }
+  })
+
+  tools.log.info('Update values response:')
+  tools.log.info(JSON.stringify(updateValuesRes))
 
   tools.exit.success('We did it!')
 }
