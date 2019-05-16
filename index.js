@@ -162,7 +162,7 @@ async function main() {
   const cellValue = `=HYPERLINK("${issueUrl}", "OOO")`
   const updateValueRequests = weekdayColumnCellsInRange.map(dateColumnCell => {
     return {
-      range: `${dateColumnCell.col}${loginRowCellForIssueCreator.row}`,
+      range: `'${SHEET_NAME}'!${dateColumnCell.col}${loginRowCellForIssueCreator.row}`,
       majorDimension: 'ROWS',
       values: [[cellValue]]
     }
