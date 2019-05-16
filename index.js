@@ -170,7 +170,7 @@ async function main() {
     } column cell(s) for days included in date range!`
   )
 
-  const weekdayColumnCellsInRange = dateColCells.filter(c =>
+  const weekdayColumnCellsInRange = dateColumnCellsInRange.filter(c =>
     isWeekdayDate(c.value)
   )
   tools.log.info(
