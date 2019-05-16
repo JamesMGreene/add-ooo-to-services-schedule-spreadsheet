@@ -96,6 +96,17 @@ async function main() {
 
   const sheets = google.sheets('v4')
 
+  const withGridDataRes = await sheets.spreadsheets.get({
+    auth: jwtClient,
+    spreadsheetId: SPREADSHEET_ID,
+    range: `'${SHEET_NAME}'!${DATE_ROW}:${DATE_ROW}`,
+    majorDimension: 'ROWS',
+    includeGridData: true
+  })
+
+  tools.log.info('Response with Grid Data:')
+  tools.log.info(JSON.stringify(withGridDataRes))
+
   const [dateRowRes, loginColRes] = await Promise.all([
     sheets.spreadsheets.values.get({
       auth: jwtClient,
@@ -179,6 +190,9 @@ async function main() {
 
   tools.log.info('Update values response:')
   tools.log.info(JSON.stringify(updateValuesRes))
+
+  tools.log.info('Sheets data:')
+  tools.log.info(sheets.spreadsheets.sheets)
 
   tools.exit.success('We did it!')
 }
