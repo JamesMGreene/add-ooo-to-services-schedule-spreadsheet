@@ -1,9 +1,14 @@
+// Use UTC for for all Date parsing
+process.env.TZ = 'UTC'
+
 // Userland modules
 const { Toolkit } = require('actions-toolkit')
 const { google } = require('googleapis')
 const dateColumnMapper = require('./src/date-column-mapper')
 const loginRowMapperGenerator = require('./src/login-row-mapper-generator')
+const extractOooCommandDates = require('./src/extract-ooo-command-dates')
 const areDatesEqual = require('./src/are-dates-equal')
+const formatDate = require('./src/format-date')
 
 // IMPORTANT: This mapper can only be used serially
 const loginRowMapper = loginRowMapperGenerator()
@@ -38,8 +43,6 @@ const tools = new Toolkit({
   ]
 })
 
-tools.log.info('Welcome!')
-
 // Wrap into an `async` function so we can using `await`
 async function main() {
   const {
@@ -60,8 +63,6 @@ async function main() {
   const issueTitleLower = issueTitle.toLowerCase()
   const issueBody = issue.body
   const issueUrl = issue.html_url
-  const oooStartDate = ''
-  const oooEndDate = ''
 
   // Exit early neutrally if the issue is not an OOO issue
   if (
@@ -81,6 +82,16 @@ async function main() {
   // Exit early neutrally if the issue comment is not from the issue's original author
   if (issue.user.id !== comment.user.id) {
     tools.exit.neutral('This comment is not from the OOO issue author')
+  }
+
+  const extraction = extractOooCommandDates(comment.body)
+  if (!extraction) {
+    tools.exit.neutral('This comment does not contain an OOO slash command')
+  }
+
+  const { startDate, endDate } = extraction
+  if (!startDate || !endDate) {
+    tools.exit.failure('This OOO command does not contain identifiable dates')
   }
 
   // Configure a JWT auth client using the Service Account
@@ -131,19 +142,22 @@ async function main() {
   tools.log.info(JSON.stringify(loginRowCellForIssueCreator))
 
   const dateColumnCellForStartIndex = dateColCells.findIndex(c =>
-    areDatesEqual(c.value, oooStartDate)
+    areDatesEqual(c.value, startDate)
   )
-  const dateColumnCellForEndIndex = areDatesEqual(oooStartDate, oooEndDate)
+  const dateColumnCellForEndIndex = areDatesEqual(startDate, endDate)
     ? dateColumnCellForStartIndex
-    : dateColCells.findIndex(c => areDatesEqual(c.value, oooEndDate))
+    : dateColCells.findIndex(c => areDatesEqual(c.value, endDate))
 
   if (dateColumnCellForStartIndex === -1 || dateColumnCellForEndIndex === -1) {
     tools.exit.failure(
-      `Could not find column cells matching issue date range (${oooStartDate} - ${oooEndDate}) for issue: ${issueUrl}`
+      `Could not find column cells matching issue date range (${formatDate(
+        startDate
+      )} - ${formatDate(endDate)}) for issue: ${issueUrl}`
     )
   }
 
   const dateColumnCellForStart = dateColCells[dateColumnCellForStartIndex]
+  const dateColumnCellForEnd = dateColCells[dateColumnCellForEndIndex]
 
   tools.log.info('Found column cell for start date!')
   tools.log.info(JSON.stringify(dateColumnCellForStart))
