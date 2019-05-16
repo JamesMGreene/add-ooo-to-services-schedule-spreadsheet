@@ -17,7 +17,7 @@ const JAN_14_2020 = {
 
 describe('extract-ooo-command-dates', () => {
   beforeEach(() => {
-    MockDate.set('5/15/2019', 0)
+    MockDate.set('5/15/2019')
   })
 
   afterEach(() => {
