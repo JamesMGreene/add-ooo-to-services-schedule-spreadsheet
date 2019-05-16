@@ -156,13 +156,13 @@ async function main() {
     )
   }
 
-  const dateColumnCellForStart = dateColCells[dateColumnCellForStartIndex]
-  const dateColumnCellForEnd = dateColCells[dateColumnCellForEndIndex]
+  const dateColumnCellsInRange = dateColCells.slice(dateColumnCellForStartIndex, dateColumnCellForEndIndex + 1)
 
+  tools.log.info(`Found ${dateColumnCellsInRange.length} column cell(s) for involved dates!`)
   tools.log.info('Found column cell for start date!')
-  tools.log.info(JSON.stringify(dateColumnCellForStart))
+  tools.log.info(JSON.stringify(dateColumnCellsInRange[0]))
   tools.log.info('Found column cell for end date!')
-  tools.log.info(JSON.stringify(dateColumnCellForEnd))
+  tools.log.info(JSON.stringify(dateColumnCellsInRange[dateColumnCellsInRange.length - 1]))
 
   // const updateRes = await sheets.spreadsheets.batchUpdate({
   //   auth: jwtClient,
