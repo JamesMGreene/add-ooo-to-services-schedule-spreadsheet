@@ -191,9 +191,6 @@ async function main() {
   tools.log.info('Update values response:')
   tools.log.info(JSON.stringify(updateValuesRes))
 
-  tools.log.info('Sheets data:')
-  tools.log.info(sheets.spreadsheets.sheets)
-
   tools.exit.success('We did it!')
 }
 
