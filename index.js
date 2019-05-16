@@ -23,12 +23,7 @@ const loginRowMapper = loginRowMapperGenerator()
 // process.env.DATE_ROW = '1'
 // process.env.LOGIN_COL = 'B'
 
-const requiredNonSecretEnvVars = [
-  'SPREADSHEET_ID',
-  'SHEET_NAME',
-  'DATE_ROW',
-  'LOGIN_COL'
-]
+const requiredNonSecretEnvVars = ['SPREADSHEET_ID', 'SHEET_NAME', 'DATE_ROW', 'LOGIN_COL']
 
 const tools = new Toolkit({
   // If the event received is not included,
@@ -68,12 +63,7 @@ async function main() {
   const issueUrl = issue.html_url
 
   // Exit early neutrally if the issue is not an OOO issue
-  if (
-    !(
-      issueTitleLower.includes('ooo') ||
-      issueTitleLower.includes('out of office')
-    )
-  ) {
+  if (!(issueTitleLower.includes('ooo') || issueTitleLower.includes('out of office'))) {
     tools.exit.neutral('This is not an OOO issue')
   }
 
@@ -98,12 +88,9 @@ async function main() {
   }
 
   // Configure a JWT auth client using the Service Account
-  const jwtClient = new google.auth.JWT(
-    GOOGLE_API_CLIENT_EMAIL,
-    null,
-    GOOGLE_API_PRIVATE_KEY,
-    ['https://www.googleapis.com/auth/spreadsheets']
-  )
+  const jwtClient = new google.auth.JWT(GOOGLE_API_CLIENT_EMAIL, null, GOOGLE_API_PRIVATE_KEY, [
+    'https://www.googleapis.com/auth/spreadsheets'
+  ])
   // Authenticate request (const tokens = )
   await jwtClient.authorize()
 
@@ -144,9 +131,7 @@ async function main() {
   tools.log.info('Found row cell for issue creator!')
   tools.log.info(JSON.stringify(loginRowCellForIssueCreator))
 
-  const dateColumnCellForStartIndex = dateColCells.findIndex(c =>
-    areDatesEqual(c.value, startDate)
-  )
+  const dateColumnCellForStartIndex = dateColCells.findIndex(c => areDatesEqual(c.value, startDate))
   const dateColumnCellForEndIndex = areDatesEqual(startDate, endDate)
     ? dateColumnCellForStartIndex
     : dateColCells.findIndex(c => areDatesEqual(c.value, endDate))
@@ -165,18 +150,12 @@ async function main() {
   )
 
   tools.log.info(
-    `Found ${
-      dateColumnCellsInRange.length
-    } column cell(s) for days included in date range!`
+    `Found ${dateColumnCellsInRange.length} column cell(s) for days included in date range!`
   )
 
-  const weekdayColumnCellsInRange = dateColumnCellsInRange.filter(c =>
-    isWeekdayDate(c.value)
-  )
+  const weekdayColumnCellsInRange = dateColumnCellsInRange.filter(c => isWeekdayDate(c.value))
   tools.log.info(
-    `Found ${
-      weekdayColumnCellsInRange.length
-    } column cell(s) for weekdays included in date range!`
+    `Found ${weekdayColumnCellsInRange.length} column cell(s) for weekdays included in date range!`
   )
   tools.log.info(JSON.stringify(weekdayColumnCellsInRange))
 

@@ -16,12 +16,7 @@ function convertDateToObject(date) {
 function extractOooCommandDates(text) {
   const command = (text || '').match(commandMatch)
 
-  if (
-    !command ||
-    !command[1] ||
-    !command[2] ||
-    command[1].toLowerCase() !== 'ooo'
-  ) {
+  if (!command || !command[1] || !command[2] || command[1].toLowerCase() !== 'ooo') {
     return null
   }
 

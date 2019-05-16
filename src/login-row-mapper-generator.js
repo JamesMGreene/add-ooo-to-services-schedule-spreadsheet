@@ -19,8 +19,7 @@ function loginRowMapperGenerator() {
 
     if (hitLegend) return defaultVal
 
-    if (!trimmedLowerValue || loginValuesToIgnore.includes(trimmedLowerValue))
-      return defaultVal
+    if (!trimmedLowerValue || loginValuesToIgnore.includes(trimmedLowerValue)) return defaultVal
 
     if (trimmedLowerValue === 'legend') {
       hitLegend = true
