@@ -19,8 +19,8 @@ LABEL "com.github.actions.icon"="calendar"
 # And all of the available colors: https://developer.github.com/actions/creating-github-actions/creating-a-docker-container/#label
 LABEL "com.github.actions.color"="green"
 
-LABEL "repository"="http://github.com/JamesMGreene/add-ooo-to-services-google-calendar"
-LABEL "homepage"="http://github.com/JamesMGreene/add-ooo-to-services-google-calendar"
+LABEL "repository"="https://github.com/JamesMGreene/add-ooo-to-services-google-calendar"
+LABEL "homepage"="https://github.com/JamesMGreene/add-ooo-to-services-google-calendar"
 LABEL "maintainer"="James M. Greene <jamesmgreene@github.com>"
 
 # Copy the package.json and package-lock.json
