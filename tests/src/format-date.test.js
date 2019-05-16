@@ -23,12 +23,12 @@ describe('format-date', () => {
   })
 
   it('returns expected value for Date with double-digit month and day', () => {
-    const date = new Date('2019-12-31T00:00:00.000Z')
+    const date = new Date('2019-12-31T00:00:00.000')
     expect(formatDate(date)).toBe('2019-12-31')
   })
 
   it('returns expected value for Date with single-digit month and day', () => {
-    const date = new Date('2020-01-07T00:00:00.000Z')
+    const date = new Date('2020-01-07T00:00:00.000')
     expect(formatDate(date)).toBe('2020-01-07')
   })
 
