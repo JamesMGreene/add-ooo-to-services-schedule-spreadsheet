@@ -172,7 +172,7 @@ async function main() {
     auth: jwtClient,
     spreadsheetId: SPREADSHEET_ID,
     resource: {
-      valueInputOption: 'RAW',
+      valueInputOption: 'USER_ENTERED',
       data: updateValueRequests
     }
   })
