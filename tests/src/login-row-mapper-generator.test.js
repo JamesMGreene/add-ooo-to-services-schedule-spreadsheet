@@ -1,3 +1,4 @@
+// Local modules
 const loginRowMapperGenerator = require('../../src/login-row-mapper-generator')
 
 const sampleRows = [

@@ -1,3 +1,4 @@
+// Local modules
 const areDatesEqual = require('../../src/are-dates-equal')
 
 const DEC_31_2019 = {
