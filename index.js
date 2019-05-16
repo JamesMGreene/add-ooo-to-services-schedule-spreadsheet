@@ -25,7 +25,7 @@ const requiredNonSecretEnvVars = [
 const tools = new Toolkit({
   // If the event received is not included,
   // Toolkit will exit neutrally
-  event: ['issues.opened'],
+  event: ['issue_comment.created'],
 
   // If the following environment variables are not present,
   // Toolkit will exit with a failure
@@ -51,7 +51,10 @@ async function main() {
     LOGIN_COL
   } = process.env
 
-  const { issue } = tools.context.payload
+  tools.log.info('Payload:')
+  tools.log.info(JSON.stringify(tools.context.payload))
+
+  const { issue, comment } = tools.context.payload
   const issueCreatorLogin = issue.user.login.toLowerCase()
   const issueTitle = issue.title
   const issueTitleLower = issueTitle.toLowerCase()
@@ -68,6 +71,16 @@ async function main() {
     )
   ) {
     tools.exit.neutral('This is not an OOO issue')
+  }
+
+  // Exit early neutrally if the issue comment is from a bot
+  if (comment.user.type === 'Bot') {
+    tools.exit.neutral('This comment is from a bot')
+  }
+
+  // Exit early neutrally if the issue comment is not from the issue's original author
+  if (issue.user.id !== comment.user.id) {
+    tools.exit.neutral('This comment is not from the OOO issue author')
   }
 
   // Configure a JWT auth client using the Service Account
@@ -100,8 +113,6 @@ async function main() {
   const dateColCells = dateRowRes.data.values[0].map(dateColumnMapper)
   const loginRowCells = loginColRes.data.values[0].map(loginRowMapper)
 
-  tools.log.info('Payload:')
-  tools.log.info(JSON.stringify(tools.context.payload))
   tools.log.info('Date column cells:')
   tools.log.info(JSON.stringify(dateColCells))
   tools.log.info('Login row cells:')
