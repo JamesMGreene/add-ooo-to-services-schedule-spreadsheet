@@ -7,9 +7,9 @@ function convertDateToObject(date) {
   if (!date) return null
 
   return {
-    year: date.getFullYear(),
-    month: date.getMonth() + 1,
-    day: date.getDate()
+    year: date.getUTCFullYear(),
+    month: date.getUTCMonth() + 1,
+    day: date.getUTCDate()
   }
 }
 

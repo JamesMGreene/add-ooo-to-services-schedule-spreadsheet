@@ -1,11 +1,17 @@
+// Use UTC for all Date parsing
+process.env.TZ = 'UTC'
+
 // Userland modules
 const { Toolkit } = require('actions-toolkit')
 const { google } = require('googleapis')
+
+// Local modules
 const dateColumnMapper = require('./src/date-column-mapper')
 const loginRowMapperGenerator = require('./src/login-row-mapper-generator')
 const extractOooCommandDates = require('./src/extract-ooo-command-dates')
 const areDatesEqual = require('./src/are-dates-equal')
 const formatDate = require('./src/format-date')
+const isWeekdayDate = require('./src/is-weekday-date')
 
 // IMPORTANT: This mapper can only be used serially
 const loginRowMapper = loginRowMapperGenerator()
@@ -159,14 +165,20 @@ async function main() {
   )
 
   tools.log.info(
-    `Found ${dateColumnCellsInRange.length} column cell(s) for involved dates!`
+    `Found ${
+      dateColumnCellsInRange.length
+    } column cell(s) for days included in date range!`
   )
-  tools.log.info('Found column cell for start date!')
-  tools.log.info(JSON.stringify(dateColumnCellsInRange[0]))
-  tools.log.info('Found column cell for end date!')
+
+  const weekdayColumnCellsInRange = dateColCells.filter(c =>
+    isWeekdayDate(c.value)
+  )
   tools.log.info(
-    JSON.stringify(dateColumnCellsInRange[dateColumnCellsInRange.length - 1])
+    `Found ${
+      weekdayColumnCellsInRange.length
+    } column cell(s) for weekdays included in date range!`
   )
+  tools.log.info(JSON.stringify(weekdayColumnCellsInRange))
 
   // const updateRes = await sheets.spreadsheets.batchUpdate({
   //   auth: jwtClient,
