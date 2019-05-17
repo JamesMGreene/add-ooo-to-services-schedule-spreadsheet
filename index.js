@@ -191,7 +191,8 @@ async function main() {
   })
 
   tools.log.info('Sheet with grid data:')
-  tools.log.info(JSON.stringify(sheetDataRes))
+  tools.log.info(JSON.stringify(Object.keys(sheetDataRes)))
+  //tools.log.info(JSON.stringify(sheetDataRes))
 
   const namedSheetId = sheetDataRes.data.sheets[0].properties.sheetId
 
