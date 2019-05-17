@@ -238,12 +238,10 @@ The [Services schedule has been updated](${sheetRangeLink}) based on your \`ooo\
         const userEnteredValue = isPartOfMergedRange ? null : targetSheet.data[i].rowData[0].values[0].userEnteredValue
         const actualValue = isPartOfMergedRange ? '_{part of a merged range}_' : `<code>${getActualValueFromExtendedValue(userEnteredValue)}</code>`
 
-        return `
-    <tr>
-      <th>${targetDate}<br />[${columnName}]</th>
+        return `    <tr>
+      <th nowrap>${targetDate}<br />[${columnName}]</th>
       <td>${actualValue}</td>
-    </tr>
-`
+    </tr>`
       }).join('') + `
   </table>
 
@@ -263,12 +261,10 @@ The [Services schedule has been updated](${sheetRangeLink}) based on your \`ooo\
         const wasPartOfMergedRange = !targetSheet.data[i].rowData
         const actualValue = wasPartOfMergedRange ? '_{part of a merged range}_' : `<code>${cellValue}</code>`
 
-        return `
-    <tr>
-      <th>${targetDate}<br />[${columnName}]</th>
+        return `    <tr>
+      <th nowrap>${targetDate}<br />[${columnName}]</th>
       <td>${actualValue}</td>
-    </tr>
-`
+    </tr>`
       }).join('') + `
   </table>
 </details>
