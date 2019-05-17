@@ -195,10 +195,16 @@ async function main() {
   tools.log.info(JSON.stringify(sheetDataRes.data.spreadsheetId))
   tools.log.info('spreadsheetUrl:')
   tools.log.info(JSON.stringify(sheetDataRes.data.spreadsheetUrl))
-  tools.log.info('sheets:')
-  tools.log.info(JSON.stringify(Object.keys(sheetDataRes.data.sheets[0])))
   tools.log.info('properties:')
   tools.log.info(JSON.stringify(sheetDataRes.data.properties))
+  tools.log.info('sheets[0].properties:')
+  tools.log.info(JSON.stringify(sheetDataRes.data.sheets[0].properties))
+  tools.log.info('sheets[0].conditionalFormats:')
+  tools.log.info(JSON.stringify(sheetDataRes.data.sheets[0].conditionalFormats))
+  tools.log.info('sheets[0].bandedRanges:')
+  tools.log.info(JSON.stringify(sheetDataRes.data.sheets[0].bandedRanges))
+  tools.log.info('sheets[0].data:')
+  tools.log.info(JSON.stringify(sheetDataRes.data.sheets[0].data))
   //tools.log.info(JSON.stringify(sheetDataRes))
 
   const namedSheetId = sheetDataRes.data.sheets[0].properties.sheetId
