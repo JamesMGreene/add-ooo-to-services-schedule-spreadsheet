@@ -236,7 +236,7 @@ The [Services schedule has been updated](${sheetRangeLink}) based on your \`ooo\
         // the displayed value for the range ;_;
         const isPartOfMergedRange = !targetSheet.data[i].rowData
         const userEnteredValue = isPartOfMergedRange ? null : targetSheet.data[i].rowData[0].values[0].userEnteredValue
-        const actualValue = isPartOfMergedRange ? '_<part of a merged range>_' : '`' + getActualValueFromExtendedValue(userEnteredValue) + '`'
+        const actualValue = isPartOfMergedRange ? '_{part of a merged range}_' : `<code>${getActualValueFromExtendedValue(userEnteredValue)}</code>`
 
         return `
     <tr>
@@ -261,7 +261,7 @@ The [Services schedule has been updated](${sheetRangeLink}) based on your \`ooo\
         // This ONLY covers cells that are part of a merged range but NOT the cell that provides
         // the displayed value for the range ;_;
         const wasPartOfMergedRange = !targetSheet.data[i].rowData
-        const actualValue = wasPartOfMergedRange ? '_<part of a merged range>_' : '`' + cellValue + '`'
+        const actualValue = wasPartOfMergedRange ? '_{part of a merged range}_' : `<code>${cellValue}</code>`
 
         return `
     <tr>
