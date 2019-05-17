@@ -159,6 +159,22 @@ async function main() {
   )
   tools.log.info(JSON.stringify(weekdayColumnCellsInRange))
 
+  tools.log.info('Sheet with grid data before updating:')
+  tools.log.info('spreadsheetId:')
+  tools.log.info(JSON.stringify(sheetDataRes.data.spreadsheetId))
+  tools.log.info('spreadsheetUrl:')
+  tools.log.info(JSON.stringify(sheetDataRes.data.spreadsheetUrl))
+  tools.log.info('properties:')
+  tools.log.info(JSON.stringify(sheetDataRes.data.properties))
+  const sheet = sheetDataRes.data.sheets[0]
+  tools.log.info('sheets[0].properties:')
+  tools.log.info(JSON.stringify(sheet.properties))
+  tools.log.info('sheets[0].conditionalFormats[]: <ignored>')
+  tools.log.info('sheets[0].bandedRanges[]: <ignored>')
+  tools.log.info('sheets[0].data[]:')
+  tools.log.info(JSON.stringify(sheet.data))
+  //tools.log.info(JSON.stringify(sheetDataRes))
+
   const cellValue = `=HYPERLINK("${issueUrl}", "OOO")`
   const updateValueRequests = weekdayColumnCellsInRange.map(dateColumnCell => {
     return {
@@ -189,22 +205,6 @@ async function main() {
     }),
     includeGridData: true
   })
-
-  tools.log.info('Sheet with grid data:')
-  tools.log.info('spreadsheetId:')
-  tools.log.info(JSON.stringify(sheetDataRes.data.spreadsheetId))
-  tools.log.info('spreadsheetUrl:')
-  tools.log.info(JSON.stringify(sheetDataRes.data.spreadsheetUrl))
-  tools.log.info('properties:')
-  tools.log.info(JSON.stringify(sheetDataRes.data.properties))
-  const sheet = sheetDataRes.data.sheets[0]
-  tools.log.info('sheets[0].properties:')
-  tools.log.info(JSON.stringify(sheet.properties))
-  tools.log.info('sheets[0].conditionalFormats[]: <ignored>')
-  tools.log.info('sheets[0].bandedRanges[]: <ignored>')
-  tools.log.info('sheets[0].data[]:')
-  tools.log.info(JSON.stringify(sheet.data))
-  //tools.log.info(JSON.stringify(sheetDataRes))
 
   const namedSheetId = sheetDataRes.data.sheets[0].properties.sheetId
 
