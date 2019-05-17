@@ -159,6 +159,16 @@ async function main() {
   )
   tools.log.info(JSON.stringify(weekdayColumnCellsInRange))
 
+  // Get the ID of the named sheet so that we can build a URL to link to the updated cells
+  const sheetDataRes = await sheets.spreadsheets.get({
+    auth: jwtClient,
+    spreadsheetId: SPREADSHEET_ID,
+    ranges: weekdayColumnCellsInRange.map(dateColumnCell => {
+      return `'${SHEET_NAME}'!${dateColumnCell.col}${loginRowCellForIssueCreator.row}`
+    }),
+    includeGridData: true
+  })
+
   tools.log.info('Sheet with grid data before updating:')
   tools.log.info('spreadsheetId:')
   tools.log.info(JSON.stringify(sheetDataRes.data.spreadsheetId))
@@ -195,16 +205,6 @@ async function main() {
 
   tools.log.info('Update values response:')
   tools.log.info(JSON.stringify(updateValuesRes))
-
-  // Get the ID of the named sheet so that we can build a URL to link to the updated cells
-  const sheetDataRes = await sheets.spreadsheets.get({
-    auth: jwtClient,
-    spreadsheetId: SPREADSHEET_ID,
-    ranges: weekdayColumnCellsInRange.map(dateColumnCell => {
-      return `'${SHEET_NAME}'!${dateColumnCell.col}${loginRowCellForIssueCreator.row}`
-    }),
-    includeGridData: true
-  })
 
   const namedSheetId = sheetDataRes.data.sheets[0].properties.sheetId
 
