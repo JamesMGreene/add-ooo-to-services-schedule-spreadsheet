@@ -203,8 +203,8 @@ async function main() {
   tools.log.info(JSON.stringify(sheetDataRes.data.sheets[0].conditionalFormats))
   tools.log.info('sheets[0].bandedRanges:')
   tools.log.info(JSON.stringify(sheetDataRes.data.sheets[0].bandedRanges))
-  tools.log.info('sheets[0].data:')
-  tools.log.info(JSON.stringify(sheetDataRes.data.sheets[0].data))
+  //tools.log.info('sheets[0].data:')
+  //tools.log.info(JSON.stringify(sheetDataRes.data.sheets[0].data))
   //tools.log.info(JSON.stringify(sheetDataRes))
 
   const namedSheetId = sheetDataRes.data.sheets[0].properties.sheetId
