@@ -197,14 +197,15 @@ async function main() {
   tools.log.info(JSON.stringify(sheetDataRes.data.spreadsheetUrl))
   tools.log.info('properties:')
   tools.log.info(JSON.stringify(sheetDataRes.data.properties))
+  const sheet = sheetDataRes.data.sheets[0]
   tools.log.info('sheets[0].properties:')
-  tools.log.info(JSON.stringify(sheetDataRes.data.sheets[0].properties))
+  tools.log.info(JSON.stringify(Array.isArray(sheet.properties) ? sheet.properties.slice(0, 50) : sheet.properties))
   tools.log.info('sheets[0].conditionalFormats:')
-  tools.log.info(JSON.stringify(sheetDataRes.data.sheets[0].conditionalFormats))
+  tools.log.info(JSON.stringify(Array.isArray(sheet.conditionalFormats) ? sheet.conditionalFormats.slice(0, 50) : sheet.conditionalFormats))
   tools.log.info('sheets[0].bandedRanges:')
-  tools.log.info(JSON.stringify(sheetDataRes.data.sheets[0].bandedRanges))
-  //tools.log.info('sheets[0].data:')
-  //tools.log.info(JSON.stringify(sheetDataRes.data.sheets[0].data))
+  tools.log.info(JSON.stringify(Array.isArray(sheet.bandedRanges) ? sheet.bandedRanges.slice(0, 50) : sheet.bandedRanges))
+  tools.log.info('sheets[0].data:')
+  tools.log.info(JSON.stringify(Array.isArray(sheet.data) ? sheet.data.slice(0, 50) : sheet.data))
   //tools.log.info(JSON.stringify(sheetDataRes))
 
   const namedSheetId = sheetDataRes.data.sheets[0].properties.sheetId
