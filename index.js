@@ -96,19 +96,6 @@ async function main() {
 
   const sheets = google.sheets('v4')
 
-  const sheetWithGridDataRes = await sheets.spreadsheets.get({
-    auth: jwtClient,
-    spreadsheetId: SPREADSHEET_ID,
-    ranges: [`'${SHEET_NAME}'`],
-    includeGridData: true
-  })
-
-  tools.log.info('Sheet with grid data:')
-  const rawJson = JSON.stringify(sheetWithGridDataRes)
-  for (let i = 0; i < rawJson.length; i += 1000) {
-    tools.log(rawJson.slice(i, i + 1000))
-  }
-
   const [dateRowRes, loginColRes] = await Promise.all([
     sheets.spreadsheets.values.get({
       auth: jwtClient,
@@ -197,8 +184,15 @@ async function main() {
   const sheetDataRes = await sheets.spreadsheets.get({
     auth: jwtClient,
     spreadsheetId: SPREADSHEET_ID,
-    ranges: [`'${SHEET_NAME}'!A1`]
+    ranges: weekdayColumnCellsInRange.map(dateColumnCell => {
+      return `'${SHEET_NAME}'!${dateColumnCell.col}${loginRowCellForIssueCreator.row}`
+    }),
+    includeGridData: true
   })
+
+  tools.log.info('Sheet with grid data:')
+  tools.log.info(JSON.stringify(sheetDataRes))
+
   const namedSheetId = sheetDataRes.data.sheets[0].properties.sheetId
 
   const firstUpdatedCell = weekdayColumnCellsInRange[0]
