@@ -96,6 +96,16 @@ async function main() {
 
   const sheets = google.sheets('v4')
 
+  const sheetWithGridDataRes = await sheets.spreadsheets.get({
+    auth: jwtClient,
+    spreadsheetId: SPREADSHEET_ID,
+    ranges: [`'${SHEET_NAME}'`],
+    includeGridData: true
+  })
+
+  tools.log.info('Sheet with grid data:')
+  tools.log.info(JSON.stringify(sheetWithGridDataRes, null, 2))
+
   const [dateRowRes, loginColRes] = await Promise.all([
     sheets.spreadsheets.values.get({
       auth: jwtClient,
@@ -181,12 +191,12 @@ async function main() {
   tools.log.info(JSON.stringify(updateValuesRes))
 
   // Get the ID of the named sheet so that we can build a URL to link to the updated cells
-  const withGridDataRes = await sheets.spreadsheets.get({
+  const sheetDataRes = await sheets.spreadsheets.get({
     auth: jwtClient,
     spreadsheetId: SPREADSHEET_ID,
     ranges: [`'${SHEET_NAME}'!A1`]
   })
-  const namedSheetId = withGridDataRes.data.sheets[0].properties.sheetId
+  const namedSheetId = sheetDataRes.data.sheets[0].properties.sheetId
 
   const firstUpdatedCell = weekdayColumnCellsInRange[0]
   const lastUpdatedCell = weekdayColumnCellsInRange[weekdayColumnCellsInRange.length - 1]
