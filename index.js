@@ -191,9 +191,13 @@ async function main() {
   })
 
   tools.log.info('Sheet with grid data:')
+  tools.log.info('spreadsheetId:')
   tools.log.info(JSON.stringify(sheetDataRes.data.spreadsheetId))
+  tools.log.info('spreadsheetUrl:')
   tools.log.info(JSON.stringify(sheetDataRes.data.spreadsheetUrl))
-  tools.log.info(JSON.stringify(sheetDataRes.data.sheets))
+  tools.log.info('sheets length:')
+  tools.log.info(JSON.stringify(sheetDataRes.data.sheets[0].length))
+  tools.log.info('properties:')
   tools.log.info(JSON.stringify(sheetDataRes.data.properties))
   //tools.log.info(JSON.stringify(sheetDataRes))
 
