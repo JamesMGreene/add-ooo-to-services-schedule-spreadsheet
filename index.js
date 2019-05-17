@@ -103,8 +103,11 @@ async function main() {
     includeGridData: true
   })
 
-  console.log('Sheet with grid data:')
-  console.log(JSON.stringify(sheetWithGridDataRes, null, 2))
+  tools.log.info('Sheet with grid data:')
+  const rawJson = JSON.stringify(sheetWithGridDataRes, null, 2)
+  for (let i = 0; i < rawJson.length; i += 5000) {
+    tools.log(rawJson.slice(i, i + 5000))
+  }
 
   const [dateRowRes, loginColRes] = await Promise.all([
     sheets.spreadsheets.values.get({
