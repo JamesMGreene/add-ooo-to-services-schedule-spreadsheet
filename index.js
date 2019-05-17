@@ -104,9 +104,9 @@ async function main() {
   })
 
   tools.log.info('Sheet with grid data:')
-  const rawJson = JSON.stringify(sheetWithGridDataRes, null, 2)
-  for (let i = 0; i < rawJson.length; i += 5000) {
-    tools.log(rawJson.slice(i, i + 5000))
+  const rawJson = JSON.stringify(sheetWithGridDataRes)
+  for (let i = 0; i < rawJson.length; i += 1000) {
+    tools.log(rawJson.slice(i, i + 1000))
   }
 
   const [dateRowRes, loginColRes] = await Promise.all([
