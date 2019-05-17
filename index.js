@@ -12,6 +12,7 @@ const extractOooCommandDates = require('./src/extract-ooo-command-dates')
 const areDatesEqual = require('./src/are-dates-equal')
 const formatDate = require('./src/format-date')
 const isWeekdayDate = require('./src/is-weekday-date')
+const getActualValueFromExtendedValue = require('./src/get-actual-value-from-extended-value')
 
 // IMPORTANT: This mapper can only be used serially
 const loginRowMapper = loginRowMapperGenerator()
@@ -159,7 +160,6 @@ async function main() {
   )
   tools.log.info(JSON.stringify(weekdayColumnCellsInRange))
 
-  // Get the ID of the named sheet so that we can build a URL to link to the updated cells
   const sheetDataRes = await sheets.spreadsheets.get({
     auth: jwtClient,
     spreadsheetId: SPREADSHEET_ID,
@@ -169,21 +169,13 @@ async function main() {
     includeGridData: true
   })
 
-  tools.log.info('Sheet with grid data before updating:')
-  tools.log.info('spreadsheetId:')
-  tools.log.info(JSON.stringify(sheetDataRes.data.spreadsheetId))
-  tools.log.info('spreadsheetUrl:')
-  tools.log.info(JSON.stringify(sheetDataRes.data.spreadsheetUrl))
-  tools.log.info('properties:')
-  tools.log.info(JSON.stringify(sheetDataRes.data.properties))
-  const sheet = sheetDataRes.data.sheets[0]
-  tools.log.info('sheets[0].properties:')
-  tools.log.info(JSON.stringify(sheet.properties))
-  tools.log.info('sheets[0].conditionalFormats[]: <ignored>')
-  tools.log.info('sheets[0].bandedRanges[]: <ignored>')
-  tools.log.info('sheets[0].data[]:')
-  tools.log.info(JSON.stringify(sheet.data))
-  //tools.log.info(JSON.stringify(sheetDataRes))
+  const targetSheet = sheetDataRes.data.sheets[0]
+
+  // Get the ID of the named sheet so that we can build a URL to link to the updated cells
+  const namedSheetId = targetSheet.properties.sheetId
+
+  tools.log.info('Original values:')
+  tools.log.info(JSON.stringify(targetSheet.data))
 
   const cellValue = `=HYPERLINK("${issueUrl}", "OOO")`
   const updateValueRequests = weekdayColumnCellsInRange.map(dateColumnCell => {
@@ -206,8 +198,6 @@ async function main() {
   tools.log.info('Update values response:')
   tools.log.info(JSON.stringify(updateValuesRes))
 
-  const namedSheetId = sheetDataRes.data.sheets[0].properties.sheetId
-
   const firstUpdatedCell = weekdayColumnCellsInRange[0]
   const lastUpdatedCell = weekdayColumnCellsInRange[weekdayColumnCellsInRange.length - 1]
 
@@ -219,6 +209,71 @@ async function main() {
 
   tools.log.info('Linked sheet range URL:')
   tools.log.info(sheetRangeLink)
+
+  const newComment = await tools.github.issues.createComment({
+    ...tools.context.repo,
+    issue_number: tools.context.issue.number,
+    body: `
+The [Services schedule has been updated](${sheetRangeLink}) based on your \`ooo\` command!
+
+<details>
+  <summary>See the updates...</summary>
+
+  <br />
+
+  <strong>Old values:</strong>
+
+  <table>
+    <tr>
+      <td></td>
+      <th>@${comment.user.login}<br />[${loginRowCellForIssueCreator.row}]</th>
+    </tr>
+` +
+      weekdayColumnCellsInRange.map((dateColumnCell, i) => {
+        const targetDate = formatDate(dateColumnCell.value)
+        const columnName = dateColumnCell.col
+        // This ONLY covers cells that are part of a merged range but NOT the cell that provides
+        // the displayed value for the range ;_;
+        const isPartOfMergedRange = !targetSheet.data[i].rowData
+        const userEnteredValue = isPartOfMergedRange ? null : targetSheet.data[i].rowData[0].values[0].userEnteredValue
+        const actualValue = isPartOfMergedRange ? '_<part of a merged range>_' : '`' + getActualValueFromExtendedValue(userEnteredValue) + '`'
+
+        return `
+    <tr>
+      <th>${targetDate}<br />[${columnName}]</th>
+      <td>${actualValue}</td>
+    </tr>
+`
+      }) + `
+  </table>
+
+  <strong>New values:</strong>
+
+  <table>
+    <tr>
+      <td></td>
+      <th>@${comment.user.login}<br />[${loginRowCellForIssueCreator.row}]</th>
+    </tr>
+` +
+      weekdayColumnCellsInRange.map((dateColumnCell, i) => {
+        const targetDate = formatDate(dateColumnCell.value)
+        const columnName = dateColumnCell.col
+        // This ONLY covers cells that are part of a merged range but NOT the cell that provides
+        // the displayed value for the range ;_;
+        const wasPartOfMergedRange = !targetSheet.data[i].rowData
+        const actualValue = wasPartOfMergedRange ? '_<part of a merged range>_' : '`' + cellValue + '`'
+
+        return `
+    <tr>
+      <th>${targetDate}<br />[${columnName}]</th>
+      <td>${actualValue}</td>
+    </tr>
+`
+      }) + `
+  </table>
+</details>
+`
+  })
 
   tools.exit.success('We did it!')
 }
