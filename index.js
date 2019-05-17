@@ -244,7 +244,7 @@ The [Services schedule has been updated](${sheetRangeLink}) based on your \`ooo\
       <td>${actualValue}</td>
     </tr>
 `
-      }) + `
+      }).join('') + `
   </table>
 
   <strong>New values:</strong>
@@ -269,7 +269,7 @@ The [Services schedule has been updated](${sheetRangeLink}) based on your \`ooo\
       <td>${actualValue}</td>
     </tr>
 `
-      }) + `
+      }).join('') + `
   </table>
 </details>
 `
