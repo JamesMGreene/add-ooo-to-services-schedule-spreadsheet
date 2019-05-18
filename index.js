@@ -224,7 +224,7 @@ The [Services schedule has been updated](${sheetRangeLink}) based on your \`ooo\
 
   <strong>New Value:</strong>
 
-  <code>${cellValue}</code>
+  \`${cellValue}\`
 
   <strong>Old Values:</strong>
 
