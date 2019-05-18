@@ -220,15 +220,18 @@ The [Services schedule has been updated](${sheetRangeLink}) based on your \`ooo\
 <details>
   <summary>See the updates...</summary>
 
+  <br />
+
+  <strong>New Value:</strong>
+
+  <code>${cellValue}</code>
+
+  <strong>Old Values:</strong>
+
   <table>
     <tr>
       <td></td>
-      <th colspan="2">@${comment.user.login}<br />[${loginRowCellForIssueCreator.row}]</th>
-    </tr>
-    <tr>
-      <td></td>
-      <th>Old Value</th>
-      <th>New Value</th>
+      <th colspan>@${comment.user.login}<br />[${loginRowCellForIssueCreator.row}]</th>
     </tr>
 ` +
       weekdayColumnCellsInRange
@@ -245,18 +248,14 @@ The [Services schedule has been updated](${sheetRangeLink}) based on your \`ooo\
             ? null
             : getActualValueFromExtendedValue(oldUserEnteredValue)
           const oldDisplayValue = wasPartOfMergedRange
-            ? '<em>{part of a merged range}</em>'
+            ? '<em>{belongs to a merged range... could not be updated}</em>'
             : oldActualValue === null || oldActualValue === ''
             ? '<em>{empty}</em>'
             : `<code>${oldActualValue}</code>`
-          const newDisplayValue = wasPartOfMergedRange
-            ? '<em>{part of a merged range}</em>'
-            : `<code>${cellValue}</code>`
 
           return `    <tr>
       <th nowrap>${targetDate}<br />[${columnName}]</th>
       <td>${oldDisplayValue}</td>
-      <td>${newDisplayValue}</td>
     </tr>
 `
         })
