@@ -213,60 +213,55 @@ async function main() {
   const newComment = await tools.github.issues.createComment({
     ...tools.context.repo,
     issue_number: tools.context.issue.number,
-    body: `
+    body:
+      `
 The [Services schedule has been updated](${sheetRangeLink}) based on your \`ooo\` command!
 
 <details>
   <summary>See the updates...</summary>
 
-  <br />
-
-  <strong>Old values:</strong>
-
   <table>
     <tr>
       <td></td>
-      <th>@${comment.user.login}<br />[${loginRowCellForIssueCreator.row}]</th>
+      <th colspan="2">@${comment.user.login}<br />[${loginRowCellForIssueCreator.row}]</th>
     </tr>
-` +
-      weekdayColumnCellsInRange.map((dateColumnCell, i) => {
-        const targetDate = formatDate(dateColumnCell.value)
-        const columnName = dateColumnCell.col
-        // This ONLY covers cells that are part of a merged range but NOT the cell that provides
-        // the displayed value for the range ;_;
-        const isPartOfMergedRange = !targetSheet.data[i].rowData
-        const userEnteredValue = isPartOfMergedRange ? null : targetSheet.data[i].rowData[0].values[0].userEnteredValue
-        const actualValue = isPartOfMergedRange ? '<em>{part of a merged range}</em>' : `<code>${getActualValueFromExtendedValue(userEnteredValue)}</code>`
-
-        return `    <tr>
-      <th nowrap>${targetDate}<br />[${columnName}]</th>
-      <td>${actualValue}</td>
-    </tr>
-`
-      }).join('') + `  </table>
-
-  <strong>New values:</strong>
-
-  <table>
     <tr>
       <td></td>
-      <th>@${comment.user.login}<br />[${loginRowCellForIssueCreator.row}]</th>
+      <th>Old Value</th>
+      <th>New Value</th>
     </tr>
 ` +
-      weekdayColumnCellsInRange.map((dateColumnCell, i) => {
-        const targetDate = formatDate(dateColumnCell.value)
-        const columnName = dateColumnCell.col
-        // This ONLY covers cells that are part of a merged range but NOT the cell that provides
-        // the displayed value for the range ;_;
-        const wasPartOfMergedRange = !targetSheet.data[i].rowData
-        const actualValue = wasPartOfMergedRange ? '<em>{part of a merged range}</em>' : `<code>${cellValue}</code>`
+      weekdayColumnCellsInRange
+        .map((dateColumnCell, i) => {
+          const targetDate = formatDate(dateColumnCell.value)
+          const columnName = dateColumnCell.col
+          // This ONLY covers cells that are part of a merged range but NOT the cell that provides
+          // the displayed value for the range ;_;
+          const wasPartOfMergedRange = !targetSheet.data[i].rowData
+          const oldUserEnteredValue = wasPartOfMergedRange
+            ? null
+            : targetSheet.data[i].rowData[0].values[0].userEnteredValue
+          const oldActualValue = wasPartOfMergedRange
+            ? null
+            : getActualValueFromExtendedValue(oldUserEnteredValue)
+          const oldDisplayValue = wasPartOfMergedRange
+            ? '<em>{part of a merged range}</em>'
+            : oldActualValue === null || oldActualValue === ''
+            ? '<em>{empty}</em>'
+            : `<code>${oldActualValue}</code>`
+          const newDisplayValue = wasPartOfMergedRange
+            ? '<em>{part of a merged range}</em>'
+            : `<code>${cellValue}</code>`
 
-        return `    <tr>
+          return `    <tr>
       <th nowrap>${targetDate}<br />[${columnName}]</th>
-      <td>${actualValue}</td>
+      <td>${oldDisplayValue}</td>
+      <td>${newDisplayValue}</td>
     </tr>
 `
-      }).join('') + `  </table>
+        })
+        .join('') +
+      `  </table>
 </details>
 `
   })
