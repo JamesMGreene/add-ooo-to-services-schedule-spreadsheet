@@ -17,13 +17,6 @@ const getActualValueFromExtendedValue = require('./src/get-actual-value-from-ext
 // IMPORTANT: This mapper can only be used serially
 const loginRowMapper = loginRowMapperGenerator()
 
-// Test spreadsheet = 1GoMPfZBppYwKjdu_GR5ZCGhNBgocPfhvvSq4W6S3c2I
-// Real spreadsheet = 1jaLzkVG3BmV2fPjcKoWPeq6kRXB9Lcpqk28r-DcPeZo
-// process.env.SPREADSHEET_ID = '1GoMPfZBppYwKjdu_GR5ZCGhNBgocPfhvvSq4W6S3c2I'
-// process.env.SHEET_NAME = '2019-neworg'
-// process.env.DATE_ROW = '1'
-// process.env.LOGIN_COL = 'B'
-
 const requiredNonSecretEnvVars = ['SPREADSHEET_ID', 'SHEET_NAME', 'DATE_ROW', 'LOGIN_COL']
 
 const tools = new Toolkit({
