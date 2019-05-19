@@ -255,7 +255,7 @@ The [Services schedule has been updated](${sheetRangeLink}) based on your \`ooo\
             : `<code>${oldActualValue}</code>`
 
           return `    <tr>
-      <th nowrap>${targetDate}<br />[<a href="${sheetCellLink}>${cellCoord}</a>]</th>
+      <th nowrap>${targetDate}<br />[<a href="${sheetCellLink}">${cellCoord}</a>]</th>
       <td>${oldDisplayValue}</td>
     </tr>
 `
