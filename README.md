@@ -1,5 +1,6 @@
-# `add-ooo-to-services-google-calendar` :calendar:
-A GitHub Action to add a new OOO to the GitHub Services Google Calendar when an OOO issue is opened
+# `add-ooo-to-services-schedule-spreadsheet` :calendar:
+
+A GitHub Action to update the GitHub Services Schedule Google Spreadsheet when an `/ooo` slash command comment is created in an OOO issue
 
 ## Prerequisites
 

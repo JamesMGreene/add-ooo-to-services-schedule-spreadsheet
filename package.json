@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "add-ooo-to-services-google-calendar",
+  "name": "add-ooo-to-services-schedule-spreadsheet",
   "main": "index.js",
   "scripts": {
     "start": "node ./index.js",
