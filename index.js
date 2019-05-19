@@ -154,11 +154,19 @@ async function main() {
     `Found ${dateColumnCellsInRange.length} column cell(s) for days included in date range!`
   )
 
+  if (dateColumnCellsInRange.length === 0) {
+    tools.exit.failure('This OOO date range does not correspond to any dates in the sheet')
+  }
+
   const weekdayColumnCellsInRange = dateColumnCellsInRange.filter(c => isWeekdayDate(c.value))
   tools.log.info(
     `Found ${weekdayColumnCellsInRange.length} column cell(s) for weekdays included in date range!`
   )
   tools.log.info(JSON.stringify(weekdayColumnCellsInRange))
+
+  if (weekdayColumnCellsInRange.length === 0) {
+    tools.exit.failure('This OOO date range only corresponds to weekend dates')
+  }
 
   const sheetDataRes = await sheets.spreadsheets.get({
     auth: jwtClient,
