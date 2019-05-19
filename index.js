@@ -231,13 +231,14 @@ The [Services schedule has been updated](${sheetRangeLink}) based on your \`ooo\
   <table>
     <tr>
       <td></td>
-      <th colspan>@${comment.user.login}<br />[${loginRowCellForIssueCreator.row}]</th>
+      <th align="left">@${comment.user.login}</th>
     </tr>
 ` +
       weekdayColumnCellsInRange
         .map((dateColumnCell, i) => {
           const targetDate = formatDate(dateColumnCell.value)
-          const columnName = dateColumnCell.col
+          const cellCoord = `${dateColumnCell.col}${loginRowCellForIssueCreator.row}`
+          const sheetCellLink = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/edit#gid=${namedSheetId}&range=${cellCoord}`
           // This ONLY covers cells that are part of a merged range but NOT the cell that provides
           // the displayed value for the range ;_;
           const wasPartOfMergedRange = !targetSheet.data[i].rowData
@@ -254,7 +255,7 @@ The [Services schedule has been updated](${sheetRangeLink}) based on your \`ooo\
             : `<code>${oldActualValue}</code>`
 
           return `    <tr>
-      <th nowrap>${targetDate}<br />[${columnName}]</th>
+      <th nowrap>${targetDate}<br />[<a href="${sheetCellLink}>${cellCoord}</a>]</th>
       <td>${oldDisplayValue}</td>
     </tr>
 `
