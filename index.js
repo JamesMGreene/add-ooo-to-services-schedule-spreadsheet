@@ -238,7 +238,7 @@ The [Services schedule has been updated](${sheetRangeLink}) based on your \`ooo\
         .map((dateColumnCell, i) => {
           const targetDate = formatDate(dateColumnCell.value)
           const cellCoord = `${dateColumnCell.col}${loginRowCellForIssueCreator.row}`
-          const sheetCellLink = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/edit#gid=${namedSheetId}&range=${cellCoord}`
+          const sheetCellLink = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/edit#gid=${namedSheetId}&amp;range=${cellCoord}`
           // This ONLY covers cells that are part of a merged range but NOT the cell that provides
           // the displayed value for the range ;_;
           const wasPartOfMergedRange = !targetSheet.data[i].rowData
