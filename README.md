@@ -46,6 +46,6 @@ How is this Action intended to work?
   - This excludes any cells that may be a submissive part of a merged range.
   - :warning: This does NOT exclude any cells that are the dominant (display-value-providing) part of a merge range, so that could update the display value for the entire merged range! :warning:
   - :warning: This does NOT exclude any cells that already have existing values! :warning:
-- Finally, a new issue comment is created by the GitHub Actions bot to confirm that your OOO days have been added to the target Google Sheet, as well as including an audit trail of the updated cells' old and new values _just_ in case this automated update conflicts with some existing value of importance that the user overlooked. :grimacing:
+- Finally, if the Google Sheet updates succeed, a new issue comment is created by the GitHub Actions bot to confirm that your OOO days have been added to the target Google Sheet, as well as including an audit trail of the updated cells' old and new values _just_ in case this automated update conflicts with some existing value of importance that the user overlooked. :grimacing:
 
 ![Bot's corresponding comment](https://user-images.githubusercontent.com/417751/57977945-43d58e80-79c8-11e9-8508-0d88e42a0965.png)
