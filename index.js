@@ -148,6 +148,7 @@ async function main() {
   tools.log.info(
     `Found ${dateColumnCellsInRange.length} column cell(s) for days included in date range!`
   )
+  tools.log.info(JSON.stringify(dateColumnCellsInRange))
 
   if (dateColumnCellsInRange.length === 0) {
     tools.exit.failure('This OOO date range does not correspond to any dates in the sheet')
