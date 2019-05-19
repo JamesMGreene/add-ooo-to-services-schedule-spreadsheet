@@ -27,6 +27,8 @@ const tools = new Toolkit({
   // If the following environment variables are not present,
   // Toolkit will exit with a failure
   secrets: [
+    // The built-in Actions secret to enable GitHub API calls
+    'GITHUB_TOKEN',
     // The email address of a GCP Service Account with access to the spreadsheet
     'GOOGLE_API_CLIENT_EMAIL',
     // The private key of a GCP Service Account with access to the spreadsheet
