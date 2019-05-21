@@ -88,7 +88,7 @@ async function main() {
 
   const isSameDate = areDatesEqual(startDate, endDate)
   const niceStartDate = moment.utc(formatDate(startDate) + 'T00:00:00.000Z').format(niceDateFormat)
-  const niceEndDate = moment.utc(formatDate(startDate) + 'T00:00:00.000Z').format(niceDateFormat)
+  const niceEndDate = moment.utc(formatDate(endDate) + 'T00:00:00.000Z').format(niceDateFormat)
   const oooDateRange = isSameDate
     ? `on ${niceStartDate}`
     : `from ${niceStartDate} to ${niceEndDate}`
