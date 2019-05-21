@@ -10,6 +10,7 @@
   "dependencies": {
     "actions-toolkit": "^2.0.0",
     "googleapis": "^39.2.0",
+    "moment": "^2.24.0",
     "sherlockjs": "^1.4.0"
   },
   "devDependencies": {

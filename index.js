@@ -4,6 +4,7 @@ process.env.TZ = 'UTC'
 // Userland modules
 const { Toolkit } = require('actions-toolkit')
 const { google } = require('googleapis')
+const moment = require('moment')
 
 // Local modules
 const dateColumnMapper = require('./src/date-column-mapper')
@@ -18,6 +19,8 @@ const getActualValueFromExtendedValue = require('./src/get-actual-value-from-ext
 const loginRowMapper = loginRowMapperGenerator()
 
 const requiredNonSecretEnvVars = ['SPREADSHEET_ID', 'SHEET_NAME', 'DATE_ROW', 'LOGIN_COL']
+
+const niceDateFormat = 'dddd, MMMM Do YYYY'
 
 const tools = new Toolkit({
   // If the event received is not included,
@@ -82,6 +85,13 @@ async function main() {
   if (!startDate || !endDate) {
     tools.exit.failure('This OOO command does not contain identifiable dates')
   }
+
+  const isSameDate = areDatesEqual(startDate, endDate)
+  const niceStartDate = moment.utc(formatDate(startDate) + 'T00:00:00.000Z').format(niceDateFormat)
+  const niceEndDate = moment.utc(formatDate(startDate) + 'T00:00:00.000Z').format(niceDateFormat)
+  const oooDateRange = isSameDate
+    ? `on ${niceStartDate}`
+    : `from ${niceStartDate} to ${niceEndDate}`
 
   // Configure a JWT auth client using the Service Account
   const jwtClient = new google.auth.JWT(GOOGLE_API_CLIENT_EMAIL, null, GOOGLE_API_PRIVATE_KEY, [
@@ -219,7 +229,9 @@ async function main() {
     issue_number: tools.context.issue.number,
     body:
       `
-The [Services schedule has been updated](${sheetRangeLink}) based on your \`ooo\` command!
+The [Services schedule has been updated](${sheetRangeLink}) to mark @${
+        comment.user.login
+      } as [OOO ${oooDateRange}](${comment.html_url}). :calendar:
 
 <details>
   <summary>See the updates...</summary>
