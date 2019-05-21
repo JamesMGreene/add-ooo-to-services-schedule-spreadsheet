@@ -12,15 +12,15 @@
 FROM node:10-alpine
 
 # Labels for GitHub to read your action
-LABEL "com.github.actions.name"="add-ooo-to-services-google-calendar"
-LABEL "com.github.actions.description"="Update the GitHub Services Google Calendar when a new OOO issue is opened"
+LABEL "com.github.actions.name"="add-ooo-to-services-schedule-spreadsheet"
+LABEL "com.github.actions.description"="Update the GitHub Services Schedule Google Spreadsheet when a new OOO issue is opened"
 # Here are all of the available icons: https://feathericons.com/
 LABEL "com.github.actions.icon"="calendar"
 # And all of the available colors: https://developer.github.com/actions/creating-github-actions/creating-a-docker-container/#label
 LABEL "com.github.actions.color"="green"
 
-LABEL "repository"="https://github.com/JamesMGreene/add-ooo-to-services-google-calendar"
-LABEL "homepage"="https://github.com/JamesMGreene/add-ooo-to-services-google-calendar"
+LABEL "repository"="https://github.com/JamesMGreene/add-ooo-to-services-schedule-spreadsheet"
+LABEL "homepage"="https://github.com/JamesMGreene/add-ooo-to-services-schedule-spreadsheet"
 LABEL "maintainer"="James M. Greene <jamesmgreene@github.com>"
 
 # Copy the package.json and package-lock.json
