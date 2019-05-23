@@ -117,6 +117,11 @@ async function main() {
     })
   ])
 
+  tools.log.info('Raw Google response for date row:')
+  tools.log.info(JSON.stringify(dateRowRes))
+  tools.log.info('Raw Google response for login column:')
+  tools.log.info(JSON.stringify(loginColRes))
+
   const dateColCells = dateRowRes.data.values[0].map(dateColumnMapper)
   const loginRowCells = loginColRes.data.values[0].map(loginRowMapper)
 
@@ -182,6 +187,8 @@ async function main() {
     }),
     includeGridData: true
   })
+  tools.log.info('Raw Google response for sheet data:')
+  tools.log.info(JSON.stringify(sheetDataRes))
 
   const targetSheet = sheetDataRes.data.sheets[0]
 
@@ -209,7 +216,7 @@ async function main() {
     }
   })
 
-  tools.log.info('Update values response:')
+  tools.log.info('Raw Google response for batchUpdate values:')
   tools.log.info(JSON.stringify(updateValuesRes))
 
   const firstUpdatedCell = weekdayColumnCellsInRange[0]
@@ -281,6 +288,9 @@ The [Services schedule has been updated](${sheetRangeLink}) to mark @${
 </details>
 `
   })
+
+  tools.log.info('Raw GitHub response for comment creation:')
+  tools.log.info(JSON.stringify(newComment))
 
   tools.exit.success('We did it!')
 }
