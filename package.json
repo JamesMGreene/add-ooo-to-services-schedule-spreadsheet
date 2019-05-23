@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./index.js",
-    "lint": "prettier --print-width 100 --single-quote --no-semi --trailing-comma none --quote-props consistent --write \"**/*.js\"",
+    "lint": "prettier --print-width 100 --single-quote --no-semi --trailing-comma none --quote-props consistent --write \"**/*.{js,json}\"",
     "test": "npm run lint && jest"
   },
   "dependencies": {

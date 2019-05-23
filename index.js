@@ -187,8 +187,8 @@ async function main() {
     }),
     includeGridData: true
   })
-  tools.log.info('Raw Google response for sheet data:')
-  tools.log.info(JSON.stringify(sheetDataRes))
+  //tools.log.info('Raw Google response for sheet data:')
+  //tools.log.info(JSON.stringify(sheetDataRes))
 
   const targetSheet = sheetDataRes.data.sheets[0]
 
