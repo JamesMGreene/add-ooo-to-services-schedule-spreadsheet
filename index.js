@@ -189,7 +189,7 @@ async function main() {
   })
   tools.log.info('Raw Google response for sheet data:')
   const text = JSON.stringify(sheetDataRes)
-  for (let i = 0; i < text.length; i += 1000) {
+  for (let i = 0; i < 19000; i += 1000) {
     tools.log.info(`[${i}, ${i + 1000}]: ${text.slice(i, i + 1000)}`)
   }
 
