@@ -184,14 +184,10 @@ async function main() {
     spreadsheetId: SPREADSHEET_ID,
     ranges: weekdayColumnCellsInRange.map(dateColumnCell => {
       return `'${SHEET_NAME}'!${dateColumnCell.col}${loginRowCellForIssueCreator.row}`
-    }),
-    includeGridData: true
+    })
   })
   tools.log.info('Raw Google response for sheet data:')
-  const text = JSON.stringify(sheetDataRes)
-  for (let i = 0; i < 19000; i += 1000) {
-    tools.log.info(`[${i}, ${i + 1000}]: ${text.slice(i, i + 1000)}`)
-  }
+  tools.log.info(JSON.stringify(sheetDataRes))
 
   const targetSheet = sheetDataRes.data.sheets[0]
 
