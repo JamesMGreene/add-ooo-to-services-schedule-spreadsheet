@@ -117,18 +117,18 @@ async function main() {
     })
   ])
 
-  // tools.log.info('Raw Google response for date row:')
-  // tools.log.info(JSON.stringify(dateRowRes))
-  // tools.log.info('Raw Google response for login column:')
-  // tools.log.info(JSON.stringify(loginColRes))
+  tools.log.info('Raw Google response for date row:')
+  tools.log.info(JSON.stringify(dateRowRes))
+  tools.log.info('Raw Google response for login column:')
+  tools.log.info(JSON.stringify(loginColRes))
 
   const dateColCells = dateRowRes.data.values[0].map(dateColumnMapper)
   const loginRowCells = loginColRes.data.values[0].map(loginRowMapper)
 
-  // tools.log.info('Date column cells:')
-  // tools.log.info(JSON.stringify(dateColCells))
-  // tools.log.info('Login row cells:')
-  // tools.log.info(JSON.stringify(loginRowCells))
+  tools.log.info('Date column cells:')
+  tools.log.info(JSON.stringify(dateColCells))
+  tools.log.info('Login row cells:')
+  tools.log.info(JSON.stringify(loginRowCells))
 
   const loginRowCellForIssueCreator = loginRowCells.find(
     c => c.value && c.value.login === issueCreatorLogin
@@ -139,8 +139,8 @@ async function main() {
     )
   }
 
-  // tools.log.info('Found row cell for issue creator!')
-  // tools.log.info(JSON.stringify(loginRowCellForIssueCreator))
+  tools.log.info('Found row cell for issue creator!')
+  tools.log.info(JSON.stringify(loginRowCellForIssueCreator))
 
   const dateColumnCellForStartIndex = dateColCells.findIndex(c => areDatesEqual(c.value, startDate))
   const dateColumnCellForEndIndex = areDatesEqual(startDate, endDate)
@@ -160,20 +160,20 @@ async function main() {
     dateColumnCellForEndIndex + 1
   )
 
-  // tools.log.info(
-  //   `Found ${dateColumnCellsInRange.length} column cell(s) for days included in date range!`
-  // )
-  // tools.log.info(JSON.stringify(dateColumnCellsInRange))
+  tools.log.info(
+    `Found ${dateColumnCellsInRange.length} column cell(s) for days included in date range!`
+  )
+  tools.log.info(JSON.stringify(dateColumnCellsInRange))
 
   if (dateColumnCellsInRange.length === 0) {
     tools.exit.failure('This OOO date range does not correspond to any dates in the sheet')
   }
 
   const weekdayColumnCellsInRange = dateColumnCellsInRange.filter(c => isWeekdayDate(c.value))
-  // tools.log.info(
-  //   `Found ${weekdayColumnCellsInRange.length} column cell(s) for weekdays included in date range!`
-  // )
-  // tools.log.info(JSON.stringify(weekdayColumnCellsInRange))
+  tools.log.info(
+    `Found ${weekdayColumnCellsInRange.length} column cell(s) for weekdays included in date range!`
+  )
+  tools.log.info(JSON.stringify(weekdayColumnCellsInRange))
 
   if (weekdayColumnCellsInRange.length === 0) {
     tools.exit.failure('This OOO date range only corresponds to weekend dates')
@@ -184,18 +184,20 @@ async function main() {
     spreadsheetId: SPREADSHEET_ID,
     ranges: weekdayColumnCellsInRange.map(dateColumnCell => {
       return `'${SHEET_NAME}'!${dateColumnCell.col}${loginRowCellForIssueCreator.row}`
-    })
+    }),
+    includeGridData: true
   })
-  tools.log.info('Raw Google response for sheet data:')
-  tools.log.info(JSON.stringify(sheetDataRes))
+
+  //tools.log.info('Raw Google response for sheet data:')
+  //tools.log.info(JSON.stringify(sheetDataRes))
 
   const targetSheet = sheetDataRes.data.sheets[0]
 
   // Get the ID of the named sheet so that we can build a URL to link to the updated cells
   const namedSheetId = targetSheet.properties.sheetId
 
-  //tools.log.info('Original values:')
-  //tools.log.info(JSON.stringify(targetSheet.data))
+  tools.log.info('Original values:')
+  tools.log.info(JSON.stringify(targetSheet.data))
 
   const cellValue = `=HYPERLINK("${issueUrl}", "OOO")`
   const updateValueRequests = weekdayColumnCellsInRange.map(dateColumnCell => {
@@ -215,8 +217,8 @@ async function main() {
     }
   })
 
-  //tools.log.info('Raw Google response for batchUpdate values:')
-  //tools.log.info(JSON.stringify(updateValuesRes))
+  tools.log.info('Raw Google response for batchUpdate values:')
+  tools.log.info(JSON.stringify(updateValuesRes))
 
   const firstUpdatedCell = weekdayColumnCellsInRange[0]
   const lastUpdatedCell = weekdayColumnCellsInRange[weekdayColumnCellsInRange.length - 1]
@@ -227,8 +229,8 @@ async function main() {
 
   const sheetRangeLink = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/edit#gid=${namedSheetId}&range=${cellCoordRange}`
 
-  //tools.log.info('Linked sheet range URL:')
-  //tools.log.info(sheetRangeLink)
+  tools.log.info('Linked sheet range URL:')
+  tools.log.info(sheetRangeLink)
 
   const newComment = await tools.github.issues.createComment({
     ...tools.context.repo,
@@ -288,8 +290,8 @@ The [Services schedule has been updated](${sheetRangeLink}) to mark @${
 `
   })
 
-  //tools.log.info('Raw GitHub response for comment creation:')
-  //tools.log.info(JSON.stringify(newComment))
+  tools.log.info('Raw GitHub response for comment creation:')
+  tools.log.info(JSON.stringify(newComment))
 
   tools.exit.success('We did it!')
 }
