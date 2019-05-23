@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "add-ooo-to-services-schedule-spreadsheet",
+  "name": "add-ooo-to-spreadsheet",
   "main": "index.js",
   "scripts": {
     "start": "node ./index.js",
@@ -17,5 +17,11 @@
     "jest": "^24.8.0",
     "mockdate": "^2.0.2",
     "prettier": "^1.17.1"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/tests/setup.js"
+    ],
+    "testEnvironment": "node"
   }
 }

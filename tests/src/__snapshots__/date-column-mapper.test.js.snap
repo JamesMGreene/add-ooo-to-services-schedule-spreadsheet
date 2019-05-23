@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`date-column-mapper returns expected values 1`] = `
+Array [
+  Object {
+    "col": "A",
+    "value": null,
+  },
+  Object {
+    "col": "B",
+    "value": null,
+  },
+  Object {
+    "col": "C",
+    "value": null,
+  },
+  Object {
+    "col": "D",
+    "value": 2019-01-01T00:00:00.000Z,
+  },
+  Object {
+    "col": "E",
+    "value": 2019-01-02T00:00:00.000Z,
+  },
+  Object {
+    "col": "F",
+    "value": 2019-01-03T00:00:00.000Z,
+  },
+  Object {
+    "col": "G",
+    "value": 2019-01-04T00:00:00.000Z,
+  },
+  Object {
+    "col": "H",
+    "value": 2019-01-05T00:00:00.000Z,
+  },
+  Object {
+    "col": "I",
+    "value": 2019-01-06T00:00:00.000Z,
+  },
+  Object {
+    "col": "J",
+    "value": 2019-01-07T00:00:00.000Z,
+  },
+  Object {
+    "col": "K",
+    "value": 2019-01-08T00:00:00.000Z,
+  },
+  Object {
+    "col": "L",
+    "value": 2019-01-09T00:00:00.000Z,
+  },
+  Object {
+    "col": "M",
+    "value": 2019-01-10T00:00:00.000Z,
+  },
+  Object {
+    "col": "N",
+    "value": 2019-01-11T00:00:00.000Z,
+  },
+  Object {
+    "col": "O",
+    "value": 2019-01-12T00:00:00.000Z,
+  },
+  Object {
+    "col": "P",
+    "value": 2019-01-13T00:00:00.000Z,
+  },
+  Object {
+    "col": "Q",
+    "value": 2019-01-14T00:00:00.000Z,
+  },
+  Object {
+    "col": "R",
+    "value": 2019-01-15T00:00:00.000Z,
+  },
+  Object {
+    "col": "S",
+    "value": 2019-01-16T00:00:00.000Z,
+  },
+  Object {
+    "col": "T",
+    "value": 2019-01-17T00:00:00.000Z,
+  },
+  Object {
+    "col": "U",
+    "value": 2019-01-18T00:00:00.000Z,
+  },
+  Object {
+    "col": "V",
+    "value": 2019-01-19T00:00:00.000Z,
+  },
+  Object {
+    "col": "W",
+    "value": 2019-01-20T00:00:00.000Z,
+  },
+  Object {
+    "col": "X",
+    "value": 2019-01-21T00:00:00.000Z,
+  },
+  Object {
+    "col": "Y",
+    "value": 2019-01-22T00:00:00.000Z,
+  },
+  Object {
+    "col": "Z",
+    "value": 2019-01-23T00:00:00.000Z,
+  },
+  Object {
+    "col": "AA",
+    "value": 2019-01-24T00:00:00.000Z,
+  },
+  Object {
+    "col": "AB",
+    "value": 2019-01-25T00:00:00.000Z,
+  },
+  Object {
+    "col": "AC",
+    "value": 2019-01-26T00:00:00.000Z,
+  },
+  Object {
+    "col": "AD",
+    "value": 2019-01-27T00:00:00.000Z,
+  },
+  Object {
+    "col": "AE",
+    "value": 2019-01-28T00:00:00.000Z,
+  },
+  Object {
+    "col": "AF",
+    "value": 2019-01-29T00:00:00.000Z,
+  },
+  Object {
+    "col": "AG",
+    "value": 2019-01-30T00:00:00.000Z,
+  },
+  Object {
+    "col": "AH",
+    "value": 2019-01-31T00:00:00.000Z,
+  },
+  Object {
+    "col": "AI",
+    "value": 2019-02-01T00:00:00.000Z,
+  },
+  Object {
+    "col": "AJ",
+    "value": 2019-02-02T00:00:00.000Z,
+  },
+  Object {
+    "col": "AK",
+    "value": 2019-02-03T00:00:00.000Z,
+  },
+  Object {
+    "col": "AL",
+    "value": 2019-02-04T00:00:00.000Z,
+  },
+]
+`;

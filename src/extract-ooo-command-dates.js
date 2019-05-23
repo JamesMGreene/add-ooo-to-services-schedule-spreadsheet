@@ -3,16 +3,6 @@ const Sherlock = require('sherlockjs')
 
 const commandMatch = /^\/([\w]+)\b *(.*)?$/m
 
-function convertDateToObject(date) {
-  if (!date) return null
-
-  return {
-    year: date.getUTCFullYear(),
-    month: date.getUTCMonth() + 1,
-    day: date.getUTCDate()
-  }
-}
-
 function extractOooCommandDates(text) {
   const command = (text || '').match(commandMatch)
 
@@ -21,12 +11,11 @@ function extractOooCommandDates(text) {
   }
 
   const args = Sherlock.parse(command[2])
-  const startDate = convertDateToObject(args.startDate)
-  const endDate = convertDateToObject(args.endDate)
+  const { startDate, endDate } = args
 
   return {
-    startDate: startDate,
-    endDate: endDate || startDate
+    startDate: startDate || endDate || null,
+    endDate: endDate || startDate || null
   }
 }
 

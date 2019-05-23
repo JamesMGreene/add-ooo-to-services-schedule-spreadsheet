@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`add-ooo-to-spreadsheet exits failure for OOO command without identifiable dates 1`] = `
+Array [
+  Array [
+    "This OOO command does not contain identifiable dates",
+  ],
+]
+`;
+
+exports[`add-ooo-to-spreadsheet exits neutral for issue comment from a bot 1`] = `
+Array [
+  Array [
+    "This comment is from a bot",
+  ],
+]
+`;
+
+exports[`add-ooo-to-spreadsheet exits neutral for issue comment not containing an OOO command 1`] = `
+Array [
+  Array [
+    "This comment does not contain an OOO slash command",
+  ],
+]
+`;
+
+exports[`add-ooo-to-spreadsheet exits neutral for issue comment not from issue author 1`] = `
+Array [
+  Array [
+    "This comment is not from the OOO issue author",
+  ],
+]
+`;
+
+exports[`add-ooo-to-spreadsheet exits neutral for issues without an OOO indicator in the title 1`] = `
+Array [
+  Array [
+    "This is not an OOO issue",
+  ],
+]
+`;
+
+exports[`add-ooo-to-spreadsheet with valid OOO commands exits failure for OOO command for unrecognized dates 1`] = `
+Array [
+  Array [
+    "Could not find column cells matching issue date range (2020-01-01 - 2020-01-07) for issue: https://github.com/JamesMGreene/faux-services-actions-test/issues/23",
+  ],
+]
+`;
+
+exports[`add-ooo-to-spreadsheet with valid OOO commands exits failure for OOO command for weekend-only dates 1`] = `
+Array [
+  Array [
+    "This OOO date range only corresponds to weekend dates",
+  ],
+]
+`;
+
+exports[`add-ooo-to-spreadsheet with valid OOO commands exits failure for OOO command from an unrecognized author 1`] = `
+Array [
+  Array [
+    "Could not find row cell matching issue creator's login \\"morpheus\\" for issue: https://github.com/JamesMGreene/faux-services-actions-test/issues/23",
+  ],
+]
+`;
+
+exports[`add-ooo-to-spreadsheet with valid OOO commands exits success for OOO command for range for one date 1`] = `
+Array [
+  Array [
+    "We did it!",
+  ],
+]
+`;
+
+exports[`add-ooo-to-spreadsheet with valid OOO commands exits success for OOO command for range for one date 2`] = `
+Array [
+  Array [
+    Object {
+      "body": "
+[Updated the Services schedule](https://docs.google.com/spreadsheets/d/blah-foo-baz/edit#gid=31901548&range=FR14) to mark @JamesMGreene as [OOO on Thursday, June 20th 2019](https://github.com/JamesMGreene/faux-services-actions-test/issues/23#issuecomment-493102804). :calendar:
+
+<details>
+  <summary>See the updates...</summary>
+
+  <br />
+
+  <strong>New Value:</strong>
+
+  \`=HYPERLINK(\\"https://github.com/JamesMGreene/faux-services-actions-test/issues/23\\", \\"OOO\\")\`
+
+  <strong>Old Values:</strong>
+
+  <table>
+    <tr>
+      <td></td>
+      <th align=\\"left\\">@JamesMGreene</th>
+    </tr>
+    <tr>
+      <th nowrap>2019-06-20<br />[<a href=\\"https://docs.google.com/spreadsheets/d/blah-foo-baz/edit#gid=31901548&amp;range=FR14\\">FR14</a>]</th>
+      <td><code>OOO</code></td>
+    </tr>
+  </table>
+</details>
+",
+      "issue_number": 23,
+      "owner": "JamesMGreene",
+      "repo": "faux-services-actions-test",
+    },
+  ],
+]
+`;
+
+exports[`add-ooo-to-spreadsheet with valid OOO commands exits success for OOO command for range for two dates 1`] = `
+Array [
+  Array [
+    "We did it!",
+  ],
+]
+`;
+
+exports[`add-ooo-to-spreadsheet with valid OOO commands exits success for OOO command for range for two dates 2`] = `
+Array [
+  Array [
+    Object {
+      "body": "
+[Updated the Services schedule](https://docs.google.com/spreadsheets/d/blah-foo-baz/edit#gid=31901548&range=FR14:FW14) to mark @JamesMGreene as [OOO from Thursday, June 20th 2019 to Tuesday, June 25th 2019](https://github.com/JamesMGreene/faux-services-actions-test/issues/23#issuecomment-493102804). :calendar:
+
+<details>
+  <summary>See the updates...</summary>
+
+  <br />
+
+  <strong>New Value:</strong>
+
+  \`=HYPERLINK(\\"https://github.com/JamesMGreene/faux-services-actions-test/issues/23\\", \\"OOO\\")\`
+
+  <strong>Old Values:</strong>
+
+  <table>
+    <tr>
+      <td></td>
+      <th align=\\"left\\">@JamesMGreene</th>
+    </tr>
+    <tr>
+      <th nowrap>2019-06-20<br />[<a href=\\"https://docs.google.com/spreadsheets/d/blah-foo-baz/edit#gid=31901548&amp;range=FR14\\">FR14</a>]</th>
+      <td><code>OOO</code></td>
+    </tr>
+    <tr>
+      <th nowrap>2019-06-21<br />[<a href=\\"https://docs.google.com/spreadsheets/d/blah-foo-baz/edit#gid=31901548&amp;range=FS14\\">FS14</a>]</th>
+      <td><code>OOO</code></td>
+    </tr>
+    <tr>
+      <th nowrap>2019-06-24<br />[<a href=\\"https://docs.google.com/spreadsheets/d/blah-foo-baz/edit#gid=31901548&amp;range=FV14\\">FV14</a>]</th>
+      <td><code>OOO</code></td>
+    </tr>
+    <tr>
+      <th nowrap>2019-06-25<br />[<a href=\\"https://docs.google.com/spreadsheets/d/blah-foo-baz/edit#gid=31901548&amp;range=FW14\\">FW14</a>]</th>
+      <td><code>OOO</code></td>
+    </tr>
+  </table>
+</details>
+",
+      "issue_number": 23,
+      "owner": "JamesMGreene",
+      "repo": "faux-services-actions-test",
+    },
+  ],
+]
+`;
+
+exports[`add-ooo-to-spreadsheet with valid OOO commands exits success for OOO command for single date 1`] = `
+Array [
+  Array [
+    "We did it!",
+  ],
+]
+`;
+
+exports[`add-ooo-to-spreadsheet with valid OOO commands exits success for OOO command for single date 2`] = `
+Array [
+  Array [
+    Object {
+      "body": "
+[Updated the Services schedule](https://docs.google.com/spreadsheets/d/blah-foo-baz/edit#gid=31901548&range=FR14) to mark @JamesMGreene as [OOO on Thursday, June 20th 2019](https://github.com/JamesMGreene/faux-services-actions-test/issues/23#issuecomment-493102804). :calendar:
+
+<details>
+  <summary>See the updates...</summary>
+
+  <br />
+
+  <strong>New Value:</strong>
+
+  \`=HYPERLINK(\\"https://github.com/JamesMGreene/faux-services-actions-test/issues/23\\", \\"OOO\\")\`
+
+  <strong>Old Values:</strong>
+
+  <table>
+    <tr>
+      <td></td>
+      <th align=\\"left\\">@JamesMGreene</th>
+    </tr>
+    <tr>
+      <th nowrap>2019-06-20<br />[<a href=\\"https://docs.google.com/spreadsheets/d/blah-foo-baz/edit#gid=31901548&amp;range=FR14\\">FR14</a>]</th>
+      <td><code>OOO</code></td>
+    </tr>
+  </table>
+</details>
+",
+      "issue_number": 23,
+      "owner": "JamesMGreene",
+      "repo": "faux-services-actions-test",
+    },
+  ],
+]
+`;

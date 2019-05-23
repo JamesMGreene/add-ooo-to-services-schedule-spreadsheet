@@ -28,7 +28,7 @@ function loginRowMapperGenerator() {
 
     const [login] = trimmedLowerValue.split(/\s/, 1)
     return {
-      value: { login },
+      value: login,
       row
     }
   }

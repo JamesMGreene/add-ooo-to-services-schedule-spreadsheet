@@ -46,45 +46,6 @@ const sampleRow = [
 
 describe('date-column-mapper', () => {
   it('returns expected values', () => {
-    expect(sampleRow.map(dateColumnMapper)).toEqual([
-      { col: 'A', value: null },
-      { col: 'B', value: null },
-      { col: 'C', value: null },
-      { col: 'D', value: { year: 2019, month: 1, day: 1 } },
-      { col: 'E', value: { year: 2019, month: 1, day: 2 } },
-      { col: 'F', value: { year: 2019, month: 1, day: 3 } },
-      { col: 'G', value: { year: 2019, month: 1, day: 4 } },
-      { col: 'H', value: { year: 2019, month: 1, day: 5 } },
-      { col: 'I', value: { year: 2019, month: 1, day: 6 } },
-      { col: 'J', value: { year: 2019, month: 1, day: 7 } },
-      { col: 'K', value: { year: 2019, month: 1, day: 8 } },
-      { col: 'L', value: { year: 2019, month: 1, day: 9 } },
-      { col: 'M', value: { year: 2019, month: 1, day: 10 } },
-      { col: 'N', value: { year: 2019, month: 1, day: 11 } },
-      { col: 'O', value: { year: 2019, month: 1, day: 12 } },
-      { col: 'P', value: { year: 2019, month: 1, day: 13 } },
-      { col: 'Q', value: { year: 2019, month: 1, day: 14 } },
-      { col: 'R', value: { year: 2019, month: 1, day: 15 } },
-      { col: 'S', value: { year: 2019, month: 1, day: 16 } },
-      { col: 'T', value: { year: 2019, month: 1, day: 17 } },
-      { col: 'U', value: { year: 2019, month: 1, day: 18 } },
-      { col: 'V', value: { year: 2019, month: 1, day: 19 } },
-      { col: 'W', value: { year: 2019, month: 1, day: 20 } },
-      { col: 'X', value: { year: 2019, month: 1, day: 21 } },
-      { col: 'Y', value: { year: 2019, month: 1, day: 22 } },
-      { col: 'Z', value: { year: 2019, month: 1, day: 23 } },
-      { col: 'AA', value: { year: 2019, month: 1, day: 24 } },
-      { col: 'AB', value: { year: 2019, month: 1, day: 25 } },
-      { col: 'AC', value: { year: 2019, month: 1, day: 26 } },
-      { col: 'AD', value: { year: 2019, month: 1, day: 27 } },
-      { col: 'AE', value: { year: 2019, month: 1, day: 28 } },
-      { col: 'AF', value: { year: 2019, month: 1, day: 29 } },
-      { col: 'AG', value: { year: 2019, month: 1, day: 30 } },
-      { col: 'AH', value: { year: 2019, month: 1, day: 31 } },
-      { col: 'AI', value: { year: 2019, month: 2, day: 1 } },
-      { col: 'AJ', value: { year: 2019, month: 2, day: 2 } },
-      { col: 'AK', value: { year: 2019, month: 2, day: 3 } },
-      { col: 'AL', value: { year: 2019, month: 2, day: 4 } }
-    ])
+    expect(sampleRow.map(dateColumnMapper)).toMatchSnapshot()
   })
 })

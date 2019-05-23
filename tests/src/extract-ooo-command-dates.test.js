@@ -4,17 +4,6 @@ const MockDate = require('mockdate')
 // Local modules
 const extractOooCommandDates = require('../../src/extract-ooo-command-dates')
 
-const MAY_22_2019 = {
-  year: 2019,
-  month: 5,
-  day: 22
-}
-const JAN_14_2020 = {
-  year: 2020,
-  month: 1,
-  day: 14
-}
-
 describe('extract-ooo-command-dates', () => {
   let originalTZ
 
@@ -47,59 +36,33 @@ describe('extract-ooo-command-dates', () => {
     expect(extractOooCommandDates('/OutOfOffice on 5/22')).toBe(null)
   })
 
+  it('returns null for a comment containing no recognizable date', () => {
+    expect(extractOooCommandDates('/OOO whenever')).toEqual({ startDate: null, endDate: null })
+  })
+
   it('returns expected values for single date in M/D format in the current year', () => {
-    expect(extractOooCommandDates('/OOO on 5/22')).toEqual({
-      startDate: MAY_22_2019,
-      endDate: MAY_22_2019
-    })
-    expect(extractOooCommandDates('/OOO from 5/22')).toEqual({
-      startDate: MAY_22_2019,
-      endDate: MAY_22_2019
-    })
+    expect(extractOooCommandDates('/OOO on 5/22')).toMatchSnapshot()
+    expect(extractOooCommandDates('/OOO from 5/22')).toMatchSnapshot()
   })
 
   it('returns expected values for single date as a range in M/D format in the current year', () => {
-    expect(extractOooCommandDates('/OOO from 5/22 to 5/22')).toEqual({
-      startDate: MAY_22_2019,
-      endDate: MAY_22_2019
-    })
+    expect(extractOooCommandDates('/OOO from 5/22 to 5/22')).toMatchSnapshot()
   })
 
   it('returns expected values for a date range in M/D format in the current year', () => {
-    expect(extractOooCommandDates('/OOO from 5/22 to 5/24')).toEqual({
-      startDate: MAY_22_2019,
-      endDate: {
-        ...MAY_22_2019,
-        day: 24
-      }
-    })
+    expect(extractOooCommandDates('/OOO from 5/22 to 5/24')).toMatchSnapshot()
   })
 
   it('returns expected values for single date in M/D format in the next year', () => {
-    expect(extractOooCommandDates('/OOO on 1/14')).toEqual({
-      startDate: JAN_14_2020,
-      endDate: JAN_14_2020
-    })
-    expect(extractOooCommandDates('/OOO from 1/14')).toEqual({
-      startDate: JAN_14_2020,
-      endDate: JAN_14_2020
-    })
+    expect(extractOooCommandDates('/OOO on 1/14')).toMatchSnapshot()
+    expect(extractOooCommandDates('/OOO from 1/14')).toMatchSnapshot()
   })
 
   it('returns expected values for single date as a range in M/D format in the next year', () => {
-    expect(extractOooCommandDates('/OOO from 1/14 to 1/14')).toEqual({
-      startDate: JAN_14_2020,
-      endDate: JAN_14_2020
-    })
+    expect(extractOooCommandDates('/OOO from 1/14 to 1/14')).toMatchSnapshot()
   })
 
   it('returns expected values for a date range in M/D format in the next year', () => {
-    expect(extractOooCommandDates('/OOO from 1/14 to 1/17')).toEqual({
-      startDate: JAN_14_2020,
-      endDate: {
-        ...JAN_14_2020,
-        day: 17
-      }
-    })
+    expect(extractOooCommandDates('/OOO from 1/14 to 1/17')).toMatchSnapshot()
   })
 })

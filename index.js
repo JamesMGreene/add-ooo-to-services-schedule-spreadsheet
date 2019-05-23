@@ -22,7 +22,7 @@ const requiredNonSecretEnvVars = ['SPREADSHEET_ID', 'SHEET_NAME', 'DATE_ROW', 'L
 
 const niceDateFormat = 'dddd, MMMM Do YYYY'
 
-const tools = new Toolkit({
+const toolkitOptions = {
   // If the event received is not included,
   // Toolkit will exit neutrally
   event: ['issue_comment.created'],
@@ -38,10 +38,9 @@ const tools = new Toolkit({
     'GOOGLE_API_PRIVATE_KEY',
     ...requiredNonSecretEnvVars
   ]
-})
+}
 
-// Wrap into an `async` function so we can using `await`
-async function main() {
+Toolkit.run(async tools => {
   const {
     GOOGLE_API_CLIENT_EMAIL,
     GOOGLE_API_PRIVATE_KEY,
@@ -63,32 +62,32 @@ async function main() {
 
   // Exit early neutrally if the issue is not an OOO issue
   if (!(issueTitleLower.includes('ooo') || issueTitleLower.includes('out of office'))) {
-    tools.exit.neutral('This is not an OOO issue')
+    return tools.exit.neutral('This is not an OOO issue')
   }
 
   // Exit early neutrally if the issue comment is from a bot
   if (comment.user.type === 'Bot') {
-    tools.exit.neutral('This comment is from a bot')
+    return tools.exit.neutral('This comment is from a bot')
   }
 
   // Exit early neutrally if the issue comment is not from the issue's original author
   if (issue.user.id !== comment.user.id) {
-    tools.exit.neutral('This comment is not from the OOO issue author')
+    return tools.exit.neutral('This comment is not from the OOO issue author')
   }
 
   const extraction = extractOooCommandDates(comment.body)
   if (!extraction) {
-    tools.exit.neutral('This comment does not contain an OOO slash command')
+    return tools.exit.neutral('This comment does not contain an OOO slash command')
   }
 
   const { startDate, endDate } = extraction
   if (!startDate || !endDate) {
-    tools.exit.failure('This OOO command does not contain identifiable dates')
+    return tools.exit.failure('This OOO command does not contain identifiable dates')
   }
 
   const isSameDate = areDatesEqual(startDate, endDate)
-  const niceStartDate = moment.utc(formatDate(startDate) + 'T00:00:00.000Z').format(niceDateFormat)
-  const niceEndDate = moment.utc(formatDate(endDate) + 'T00:00:00.000Z').format(niceDateFormat)
+  const niceStartDate = moment.utc(startDate).format(niceDateFormat)
+  const niceEndDate = moment.utc(endDate).format(niceDateFormat)
   const oooDateRange = isSameDate
     ? `on ${niceStartDate}`
     : `from ${niceStartDate} to ${niceEndDate}`
@@ -97,7 +96,7 @@ async function main() {
   const jwtClient = new google.auth.JWT(GOOGLE_API_CLIENT_EMAIL, null, GOOGLE_API_PRIVATE_KEY, [
     'https://www.googleapis.com/auth/spreadsheets'
   ])
-  // Authenticate request (const tokens = )
+  // Authenticate request (return value: `const tokens = `)
   await jwtClient.authorize()
 
   const sheets = google.sheets('v4')
@@ -117,11 +116,6 @@ async function main() {
     })
   ])
 
-  tools.log.info('Raw Google response for date row:')
-  tools.log.info(JSON.stringify(dateRowRes))
-  tools.log.info('Raw Google response for login column:')
-  tools.log.info(JSON.stringify(loginColRes))
-
   const dateColCells = dateRowRes.data.values[0].map(dateColumnMapper)
   const loginRowCells = loginColRes.data.values[0].map(loginRowMapper)
 
@@ -130,11 +124,9 @@ async function main() {
   tools.log.info('Login row cells:')
   tools.log.info(JSON.stringify(loginRowCells))
 
-  const loginRowCellForIssueCreator = loginRowCells.find(
-    c => c.value && c.value.login === issueCreatorLogin
-  )
+  const loginRowCellForIssueCreator = loginRowCells.find(c => c.value === issueCreatorLogin)
   if (!loginRowCellForIssueCreator) {
-    tools.exit.failure(
+    return tools.exit.failure(
       `Could not find row cell matching issue creator's login "${issueCreatorLogin}" for issue: ${issueUrl}`
     )
   }
@@ -148,7 +140,7 @@ async function main() {
     : dateColCells.findIndex(c => areDatesEqual(c.value, endDate))
 
   if (dateColumnCellForStartIndex === -1 || dateColumnCellForEndIndex === -1) {
-    tools.exit.failure(
+    return tools.exit.failure(
       `Could not find column cells matching issue date range (${formatDate(
         startDate
       )} - ${formatDate(endDate)}) for issue: ${issueUrl}`
@@ -166,7 +158,7 @@ async function main() {
   tools.log.info(JSON.stringify(dateColumnCellsInRange))
 
   if (dateColumnCellsInRange.length === 0) {
-    tools.exit.failure('This OOO date range does not correspond to any dates in the sheet')
+    return tools.exit.failure('This OOO date range does not correspond to any dates in the sheet')
   }
 
   const weekdayColumnCellsInRange = dateColumnCellsInRange.filter(c => isWeekdayDate(c.value))
@@ -176,7 +168,7 @@ async function main() {
   tools.log.info(JSON.stringify(weekdayColumnCellsInRange))
 
   if (weekdayColumnCellsInRange.length === 0) {
-    tools.exit.failure('This OOO date range only corresponds to weekend dates')
+    return tools.exit.failure('This OOO date range only corresponds to weekend dates')
   }
 
   const sheetDataRes = await sheets.spreadsheets.get({
@@ -187,9 +179,6 @@ async function main() {
     }),
     includeGridData: true
   })
-
-  //tools.log.info('Raw Google response for sheet data:')
-  //tools.log.info(JSON.stringify(sheetDataRes))
 
   const targetSheet = sheetDataRes.data.sheets[0]
 
@@ -217,7 +206,7 @@ async function main() {
     }
   })
 
-  tools.log.info('Raw Google response for batchUpdate values:')
+  tools.log.info('Update values response:')
   tools.log.info(JSON.stringify(updateValuesRes))
 
   const firstUpdatedCell = weekdayColumnCellsInRange[0]
@@ -237,7 +226,7 @@ async function main() {
     issue_number: tools.context.issue.number,
     body:
       `
-The [Services schedule has been updated](${sheetRangeLink}) to mark @${
+[Updated the Services schedule](${sheetRangeLink}) to mark @${
         comment.user.login
       } as [OOO ${oooDateRange}](${comment.html_url}). :calendar:
 
@@ -290,11 +279,5 @@ The [Services schedule has been updated](${sheetRangeLink}) to mark @${
 `
   })
 
-  tools.log.info('Raw GitHub response for comment creation:')
-  tools.log.info(JSON.stringify(newComment))
-
-  tools.exit.success('We did it!')
-}
-
-// Run the main function
-main().catch(err => tools.exit.failure(err.stack))
+  return tools.exit.success('We did it!')
+}, toolkitOptions)

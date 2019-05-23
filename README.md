@@ -1,4 +1,4 @@
-# `add-ooo-to-services-schedule-spreadsheet` :calendar:
+# `add-ooo-to-spreadsheet` :calendar:
 
 A GitHub Action to update the GitHub Services Schedule Google Spreadsheet when an `/ooo` slash command comment is created in an OOO issue
 
@@ -45,7 +45,7 @@ How is this Action intended to work?
 - Weekend dates (Saturdays and Sundays) are excluded
 - Any cells in the target Google Sheet that correspond to the remaining dates for the author's row will be updated with a hyperlink to the OOO issue with the display text "OOO".
   - This excludes any cells that may be a submissive part of a merged range.
-  - :warning: This does NOT exclude any cells that are the dominant (display-value-providing) part of a merge range, so that could update the display value for the entire merged range! :warning:
+  - :warning: This does NOT exclude any cells that are the dominant (display-value-providing) part of a merged range, so that could update the display value for the entire merged range! :warning:
   - :warning: This does NOT exclude any cells that already have existing values! :warning:
 - Finally, if the Google Sheet updates succeed, a new issue comment is created by the GitHub Actions bot to confirm that your OOO days have been added to the target Google Sheet, as well as including an audit trail of the updated cells' old and new values _just_ in case this automated update conflicts with some existing value of importance that the user overlooked. :grimacing:
 

@@ -1,11 +1,7 @@
 // Local modules
 const areDatesEqual = require('../../src/are-dates-equal')
 
-const DEC_31_2019 = {
-  year: 2019,
-  month: 12,
-  day: 31
-}
+const DEC_31_2019 = new Date('2019-12-31T00:00:00.000Z')
 
 describe('are-dates-equal', () => {
   it('returns false if "date1" is falsy', () => {
@@ -22,32 +18,25 @@ describe('are-dates-equal', () => {
     expect(areDatesEqual(date1, date2)).toBe(false)
   })
 
-  it('returns false if "date1" and "date2" have different "year"', () => {
+  it('returns false if "date1" and "date2" have different year', () => {
     const date1 = DEC_31_2019
-    const date2 = {
-      ...DEC_31_2019,
-      year: 2000
-    }
+    const date2 = new Date('2000' + DEC_31_2019.toISOString().slice(4))
 
     expect(areDatesEqual(date1, date2)).toBe(false)
   })
 
-  it('returns false if "date1" and "date2" have different "month"', () => {
+  it('returns false if "date1" and "date2" have different month', () => {
+    const iso = DEC_31_2019.toISOString()
     const date1 = DEC_31_2019
-    const date2 = {
-      ...DEC_31_2019,
-      month: 1
-    }
+    const date2 = new Date(iso.slice(0, 5) + '01' + iso.slice(7))
 
     expect(areDatesEqual(date1, date2)).toBe(false)
   })
 
-  it('returns false if "date1" and "date2" have different "day"', () => {
+  it('returns false if "date1" and "date2" have different day', () => {
+    const iso = DEC_31_2019.toISOString()
     const date1 = DEC_31_2019
-    const date2 = {
-      ...DEC_31_2019,
-      day: 1
-    }
+    const date2 = new Date(iso.slice(0, 8) + '01' + iso.slice(10))
 
     expect(areDatesEqual(date1, date2)).toBe(false)
   })
@@ -60,11 +49,9 @@ describe('are-dates-equal', () => {
     expect(areDatesEqual(date1, date2)).toBe(true)
   })
 
-  it('returns true if "date1" and "date2" have matching "year", "month", and "day" values', () => {
+  it('returns true if "date1" and "date2" contain equal values', () => {
     const date1 = DEC_31_2019
-    const date2 = {
-      ...DEC_31_2019
-    }
+    const date2 = new Date(date1.toISOString())
     expect(date1).not.toBe(date2)
     expect(date1).toEqual(date2)
     expect(areDatesEqual(date1, date2)).toBe(true)

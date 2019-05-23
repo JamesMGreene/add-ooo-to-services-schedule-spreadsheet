@@ -1,0 +1,60 @@
+{
+  "config": {
+    "url": "https://sheets.googleapis.com/v4/spreadsheets/blah-foo-baz/values:batchUpdate",
+    "method": "POST",
+    "data": {
+      "valueInputOption": "USER_ENTERED",
+      "data": [
+        {
+          "range": "'2019-neworg'!FR41",
+          "majorDimension": "ROWS",
+          "values": [
+            [
+              "=HYPERLINK(\"https://github.com/JamesMGreene/faux-services-actions-test/issues/29\", \"OOO\")"
+            ]
+          ]
+        }
+      ]
+    },
+    "headers": {
+      "Accept-Encoding": "gzip",
+      "User-Agent": "google-api-nodejs-client/0.7.2 (gzip)",
+      "Authorization": "Bearer ya29.c.EloSB4Bx5m0NZQH8TPEEAcLRY_u4UZlN2yMYU4J8ELvMnKhl_gb5B22CAPpNGrwpeA_kMtxqZCyFyshFhvQxoffbzCas4sm9cLj8IsVTASk_qo438tPtRdShg0Z",
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "params": {},
+    "body": "{\"valueInputOption\":\"USER_ENTERED\",\"data\":[{\"range\":\"'2019-neworg'!FR41\",\"majorDimension\":\"ROWS\",\"values\":[[\"=HYPERLINK(\\\"https://github.com/JamesMGreene/faux-services-actions-test/issues/29\\\", \\\"OOO\\\")\"]]}]}",
+    "responseType": "json"
+  },
+  "data": {
+    "spreadsheetId": "blah-foo-baz",
+    "totalUpdatedRows": 1,
+    "totalUpdatedColumns": 1,
+    "totalUpdatedCells": 1,
+    "totalUpdatedSheets": 1,
+    "responses": [
+      {
+        "spreadsheetId": "blah-foo-baz",
+        "updatedRange": "'2019-neworg'!FR41",
+        "updatedRows": 1,
+        "updatedColumns": 1,
+        "updatedCells": 1
+      }
+    ]
+  },
+  "headers": {
+    "cache-control": "private",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-type": "application/json; charset=UTF-8",
+    "date": "Thu, 23 May 2019 16:32:46 GMT",
+    "server": "ESF",
+    "transfer-encoding": "chunked",
+    "vary": "Origin, X-Origin, Referer",
+    "x-frame-options": "SAMEORIGIN",
+    "x-xss-protection": "0"
+  },
+  "status": 200,
+  "statusText": "OK"
+}

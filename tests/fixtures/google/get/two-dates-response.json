@@ -1,0 +1,5805 @@
+{
+  "config": {
+    "url": "https://sheets.googleapis.com/v4/spreadsheets/blah-foo-baz?ranges=%272019-neworg%27%21FQ41&ranges=%272019-neworg%27%21FR41&ranges=%272019-neworg%27%21FS41&includeGridData=true",
+    "method": "GET",
+    "headers": {
+      "Accept-Encoding": "gzip",
+      "User-Agent": "google-api-nodejs-client/0.7.2 (gzip)",
+      "Authorization": "Bearer ya29.c.EloSB2vcufxAD6KF5syV3PgvFi8oK1KF0URMsnbwf-F2SibdsuNotnoKixT1_08b75xP-VVPLaHSM_KhPF1q6biJJ_kOmZxQ7kP8SJHVhFgSGDakq667NdP-wig",
+      "Accept": "application/json"
+    },
+    "params": {
+      "ranges": [
+        "'2019-neworg'!FR41",
+        "'2019-neworg'!FS41",
+        "'2019-neworg'!FV41",
+        "'2019-neworg'!FW41"
+      ],
+      "includeGridData": true
+    },
+    "responseType": "json"
+  },
+  "data": {
+    "spreadsheetId": "blah-foo-baz",
+    "properties": {
+      "title": "Professional Services Team Scheduling Calendar • Engagements and Providers",
+      "locale": "en_US",
+      "autoRecalc": "ON_CHANGE",
+      "timeZone": "America/Denver",
+      "defaultFormat": {
+        "backgroundColor": {
+          "red": 1,
+          "green": 1,
+          "blue": 1
+        },
+        "padding": {
+          "top": 2,
+          "right": 3,
+          "bottom": 2,
+          "left": 3
+        },
+        "verticalAlignment": "BOTTOM",
+        "wrapStrategy": "OVERFLOW_CELL",
+        "textFormat": {
+          "foregroundColor": {},
+          "fontFamily": "arial,sans,sans-serif",
+          "fontSize": 10,
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false
+        }
+      }
+    },
+    "sheets": [
+      {
+        "properties": {
+          "sheetId": 31901548,
+          "title": "2019-neworg",
+          "index": 0,
+          "sheetType": "GRID",
+          "gridProperties": {
+            "rowCount": 59,
+            "columnCount": 368,
+            "frozenRowCount": 2,
+            "frozenColumnCount": 3,
+            "rowGroupControlAfter": true,
+            "columnGroupControlAfter": true
+          },
+          "tabColor": {
+            "red": 0.8
+          }
+        },
+        "data": [
+          {
+            "startRow": 40,
+            "startColumn": 173,
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "OOO"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "OOO"
+                    },
+                    "formattedValue": "OOO",
+                    "userEnteredFormat": {
+                      "horizontalAlignment": "LEFT",
+                      "verticalAlignment": "MIDDLE",
+                      "wrapStrategy": "CLIP",
+                      "textFormat": {
+                        "fontFamily": "Calibri",
+                        "fontSize": 12
+                      }
+                    },
+                    "effectiveFormat": {
+                      "backgroundColor": {},
+                      "padding": {
+                        "top": 2,
+                        "right": 3,
+                        "bottom": 2,
+                        "left": 3
+                      },
+                      "horizontalAlignment": "LEFT",
+                      "verticalAlignment": "MIDDLE",
+                      "wrapStrategy": "CLIP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 1,
+                          "green": 1,
+                          "blue": 1
+                        },
+                        "fontFamily": "Calibri",
+                        "fontSize": 12,
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": true
+                      },
+                      "hyperlinkDisplayType": "LINKED"
+                    },
+                    "hyperlink": "https://github.com/JamesMGreene/faux-services-actions-test/issues/29"
+                  }
+                ]
+              }
+            ],
+            "rowMetadata": [
+              {
+                "pixelSize": 24
+              }
+            ],
+            "columnMetadata": [
+              {
+                "pixelSize": 96
+              }
+            ]
+          },
+          {
+            "startRow": 40,
+            "startColumn": 174,
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "OOO"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "OOO"
+                    },
+                    "formattedValue": "OOO",
+                    "userEnteredFormat": {
+                      "horizontalAlignment": "LEFT",
+                      "verticalAlignment": "MIDDLE",
+                      "wrapStrategy": "CLIP",
+                      "textFormat": {
+                        "fontFamily": "Calibri",
+                        "fontSize": 12
+                      }
+                    },
+                    "effectiveFormat": {
+                      "backgroundColor": {},
+                      "padding": {
+                        "top": 2,
+                        "right": 3,
+                        "bottom": 2,
+                        "left": 3
+                      },
+                      "horizontalAlignment": "LEFT",
+                      "verticalAlignment": "MIDDLE",
+                      "wrapStrategy": "CLIP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 1,
+                          "green": 1,
+                          "blue": 1
+                        },
+                        "fontFamily": "Calibri",
+                        "fontSize": 12,
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": true
+                      },
+                      "hyperlinkDisplayType": "LINKED"
+                    },
+                    "hyperlink": "https://github.com/JamesMGreene/faux-services-actions-test/issues/29"
+                  }
+                ]
+              }
+            ],
+            "rowMetadata": [
+              {
+                "pixelSize": 24
+              }
+            ],
+            "columnMetadata": [
+              {
+                "pixelSize": 96
+              }
+            ]
+          },
+          {
+            "startRow": 40,
+            "startColumn": 177,
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "OOO"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "OOO"
+                    },
+                    "formattedValue": "OOO",
+                    "userEnteredFormat": {
+                      "horizontalAlignment": "LEFT",
+                      "verticalAlignment": "MIDDLE",
+                      "wrapStrategy": "CLIP",
+                      "textFormat": {
+                        "fontFamily": "Calibri",
+                        "fontSize": 12
+                      }
+                    },
+                    "effectiveFormat": {
+                      "backgroundColor": {},
+                      "padding": {
+                        "top": 2,
+                        "right": 3,
+                        "bottom": 2,
+                        "left": 3
+                      },
+                      "horizontalAlignment": "LEFT",
+                      "verticalAlignment": "MIDDLE",
+                      "wrapStrategy": "CLIP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 1,
+                          "green": 1,
+                          "blue": 1
+                        },
+                        "fontFamily": "Calibri",
+                        "fontSize": 12,
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": true
+                      },
+                      "hyperlinkDisplayType": "LINKED"
+                    },
+                    "hyperlink": "https://github.com/JamesMGreene/faux-services-actions-test/issues/29"
+                  }
+                ]
+              }
+            ],
+            "rowMetadata": [
+              {
+                "pixelSize": 24
+              }
+            ],
+            "columnMetadata": [
+              {
+                "pixelSize": 96
+              }
+            ]
+          },
+          {
+            "startRow": 40,
+            "startColumn": 178,
+            "rowData": [
+              {
+                "values": [
+                  {
+                    "userEnteredValue": {
+                      "stringValue": "OOO"
+                    },
+                    "effectiveValue": {
+                      "stringValue": "OOO"
+                    },
+                    "formattedValue": "OOO",
+                    "userEnteredFormat": {
+                      "horizontalAlignment": "LEFT",
+                      "verticalAlignment": "MIDDLE",
+                      "wrapStrategy": "CLIP",
+                      "textFormat": {
+                        "fontFamily": "Calibri",
+                        "fontSize": 12
+                      }
+                    },
+                    "effectiveFormat": {
+                      "backgroundColor": {},
+                      "padding": {
+                        "top": 2,
+                        "right": 3,
+                        "bottom": 2,
+                        "left": 3
+                      },
+                      "horizontalAlignment": "LEFT",
+                      "verticalAlignment": "MIDDLE",
+                      "wrapStrategy": "CLIP",
+                      "textFormat": {
+                        "foregroundColor": {
+                          "red": 1,
+                          "green": 1,
+                          "blue": 1
+                        },
+                        "fontFamily": "Calibri",
+                        "fontSize": 12,
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": true
+                      },
+                      "hyperlinkDisplayType": "LINKED"
+                    },
+                    "hyperlink": "https://github.com/JamesMGreene/faux-services-actions-test/issues/29"
+                  }
+                ]
+              }
+            ],
+            "rowMetadata": [
+              {
+                "pixelSize": 24
+              }
+            ],
+            "columnMetadata": [
+              {
+                "pixelSize": 96
+              }
+            ]
+          }
+        ],
+        "conditionalFormats": [
+          {
+            "ranges": [
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 3,
+                "endColumnIndex": 52
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 56,
+                "endColumnIndex": 58
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 63,
+                "endColumnIndex": 65
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 7,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 70,
+                "endColumnIndex": 73
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 75,
+                "endColumnIndex": 83
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 84,
+                "endColumnIndex": 89
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 22,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 91,
+                "endColumnIndex": 94
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 15,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 96,
+                "endColumnIndex": 102
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 103,
+                "endColumnIndex": 114
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 24,
+                "startColumnIndex": 114,
+                "endColumnIndex": 116
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 24,
+                "startColumnIndex": 117,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 118,
+                "endColumnIndex": 121
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 121,
+                "endColumnIndex": 123
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 17,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 124,
+                "endColumnIndex": 125
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 126,
+                "endColumnIndex": 130
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 131,
+                "endColumnIndex": 137
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 139,
+                "endColumnIndex": 143
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 144,
+                "endColumnIndex": 150
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 13,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 151,
+                "endColumnIndex": 156
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 13,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 48,
+                "startColumnIndex": 157,
+                "endColumnIndex": 161
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 161,
+                "endColumnIndex": 368
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 17,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 59,
+                "endColumnIndex": 60
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 67,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 48,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 24,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 16,
+                "endRowIndex": 47,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 47,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 35,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 23,
+                "endRowIndex": 47,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 25,
+                "endRowIndex": 47,
+                "startColumnIndex": 114,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 121,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 49,
+                "endRowIndex": 59,
+                "startColumnIndex": 1,
+                "endColumnIndex": 3
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 51,
+                "endRowIndex": 52,
+                "startColumnIndex": 135,
+                "endColumnIndex": 140
+              }
+            ],
+            "booleanRule": {
+              "condition": {
+                "type": "TEXT_CONTAINS",
+                "values": [
+                  {
+                    "userEnteredValue": "=LOWER(\"[O]\")"
+                  }
+                ]
+              },
+              "format": {
+                "backgroundColor": {
+                  "red": 0.8784314,
+                  "green": 0.4,
+                  "blue": 0.4
+                },
+                "textFormat": {
+                  "foregroundColor": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                  }
+                }
+              }
+            }
+          },
+          {
+            "ranges": [
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 3,
+                "endColumnIndex": 52
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 56,
+                "endColumnIndex": 58
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 63,
+                "endColumnIndex": 65
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 7,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 70,
+                "endColumnIndex": 73
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 75,
+                "endColumnIndex": 83
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 84,
+                "endColumnIndex": 89
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 22,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 91,
+                "endColumnIndex": 94
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 15,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 96,
+                "endColumnIndex": 102
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 103,
+                "endColumnIndex": 114
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 24,
+                "startColumnIndex": 114,
+                "endColumnIndex": 116
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 24,
+                "startColumnIndex": 117,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 118,
+                "endColumnIndex": 121
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 121,
+                "endColumnIndex": 123
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 17,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 124,
+                "endColumnIndex": 125
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 126,
+                "endColumnIndex": 130
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 131,
+                "endColumnIndex": 137
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 139,
+                "endColumnIndex": 143
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 144,
+                "endColumnIndex": 150
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 13,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 151,
+                "endColumnIndex": 156
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 13,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 48,
+                "startColumnIndex": 157,
+                "endColumnIndex": 161
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 161,
+                "endColumnIndex": 368
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 17,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 59,
+                "endColumnIndex": 60
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 67,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 48,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 24,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 16,
+                "endRowIndex": 47,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 47,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 35,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 23,
+                "endRowIndex": 47,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 25,
+                "endRowIndex": 47,
+                "startColumnIndex": 114,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 121,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 49,
+                "endRowIndex": 59,
+                "startColumnIndex": 1,
+                "endColumnIndex": 3
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 51,
+                "endRowIndex": 52,
+                "startColumnIndex": 135,
+                "endColumnIndex": 140
+              }
+            ],
+            "booleanRule": {
+              "condition": {
+                "type": "TEXT_CONTAINS",
+                "values": [
+                  {
+                    "userEnteredValue": "=LOWER(\"[R]\")"
+                  }
+                ]
+              },
+              "format": {
+                "backgroundColor": {
+                  "red": 0.91764706,
+                  "green": 0.6,
+                  "blue": 0.6
+                },
+                "textFormat": {
+                  "foregroundColor": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                  }
+                }
+              }
+            }
+          },
+          {
+            "ranges": [
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 3,
+                "endColumnIndex": 52
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 56,
+                "endColumnIndex": 58
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 63,
+                "endColumnIndex": 65
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 7,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 70,
+                "endColumnIndex": 73
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 75,
+                "endColumnIndex": 83
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 84,
+                "endColumnIndex": 89
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 22,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 91,
+                "endColumnIndex": 94
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 15,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 96,
+                "endColumnIndex": 102
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 103,
+                "endColumnIndex": 114
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 24,
+                "startColumnIndex": 114,
+                "endColumnIndex": 116
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 24,
+                "startColumnIndex": 117,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 118,
+                "endColumnIndex": 121
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 121,
+                "endColumnIndex": 123
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 17,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 124,
+                "endColumnIndex": 125
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 126,
+                "endColumnIndex": 130
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 131,
+                "endColumnIndex": 137
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 139,
+                "endColumnIndex": 143
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 144,
+                "endColumnIndex": 150
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 13,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 151,
+                "endColumnIndex": 156
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 13,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 48,
+                "startColumnIndex": 157,
+                "endColumnIndex": 161
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 161,
+                "endColumnIndex": 368
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 17,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 59,
+                "endColumnIndex": 60
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 67,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 48,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 24,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 16,
+                "endRowIndex": 47,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 47,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 35,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 23,
+                "endRowIndex": 47,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 25,
+                "endRowIndex": 47,
+                "startColumnIndex": 114,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 121,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 49,
+                "endRowIndex": 59,
+                "startColumnIndex": 1,
+                "endColumnIndex": 3
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 51,
+                "endRowIndex": 52,
+                "startColumnIndex": 135,
+                "endColumnIndex": 140
+              }
+            ],
+            "booleanRule": {
+              "condition": {
+                "type": "TEXT_CONTAINS",
+                "values": [
+                  {
+                    "userEnteredValue": "=LOWER(\"[HO]\")"
+                  }
+                ]
+              },
+              "format": {
+                "backgroundColor": {
+                  "red": 1,
+                  "green": 0.6
+                },
+                "textFormat": {
+                  "foregroundColor": {
+                    "red": 0.2627451,
+                    "green": 0.2627451,
+                    "blue": 0.2627451
+                  }
+                }
+              }
+            }
+          },
+          {
+            "ranges": [
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 3,
+                "endColumnIndex": 52
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 56,
+                "endColumnIndex": 58
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 63,
+                "endColumnIndex": 65
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 7,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 70,
+                "endColumnIndex": 73
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 75,
+                "endColumnIndex": 83
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 84,
+                "endColumnIndex": 89
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 22,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 91,
+                "endColumnIndex": 94
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 15,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 96,
+                "endColumnIndex": 102
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 103,
+                "endColumnIndex": 114
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 24,
+                "startColumnIndex": 114,
+                "endColumnIndex": 116
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 24,
+                "startColumnIndex": 117,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 118,
+                "endColumnIndex": 121
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 121,
+                "endColumnIndex": 123
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 17,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 124,
+                "endColumnIndex": 125
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 126,
+                "endColumnIndex": 130
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 131,
+                "endColumnIndex": 137
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 139,
+                "endColumnIndex": 143
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 144,
+                "endColumnIndex": 150
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 13,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 151,
+                "endColumnIndex": 156
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 13,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 48,
+                "startColumnIndex": 157,
+                "endColumnIndex": 161
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 161,
+                "endColumnIndex": 368
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 17,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 59,
+                "endColumnIndex": 60
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 67,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 48,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 24,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 16,
+                "endRowIndex": 47,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 47,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 35,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 23,
+                "endRowIndex": 47,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 25,
+                "endRowIndex": 47,
+                "startColumnIndex": 114,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 121,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 49,
+                "endRowIndex": 59,
+                "startColumnIndex": 1,
+                "endColumnIndex": 3
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 51,
+                "endRowIndex": 52,
+                "startColumnIndex": 135,
+                "endColumnIndex": 140
+              }
+            ],
+            "booleanRule": {
+              "condition": {
+                "type": "TEXT_CONTAINS",
+                "values": [
+                  {
+                    "userEnteredValue": "=LOWER(\"[HR]\")"
+                  }
+                ]
+              },
+              "format": {
+                "backgroundColor": {
+                  "red": 0.9764706,
+                  "green": 0.79607844,
+                  "blue": 0.6117647
+                },
+                "textFormat": {
+                  "foregroundColor": {
+                    "red": 0.2627451,
+                    "green": 0.2627451,
+                    "blue": 0.2627451
+                  }
+                }
+              }
+            }
+          },
+          {
+            "ranges": [
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 3,
+                "endColumnIndex": 52
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 56,
+                "endColumnIndex": 58
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 63,
+                "endColumnIndex": 65
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 7,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 70,
+                "endColumnIndex": 73
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 75,
+                "endColumnIndex": 83
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 84,
+                "endColumnIndex": 89
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 22,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 91,
+                "endColumnIndex": 94
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 15,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 96,
+                "endColumnIndex": 102
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 103,
+                "endColumnIndex": 114
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 24,
+                "startColumnIndex": 114,
+                "endColumnIndex": 116
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 24,
+                "startColumnIndex": 117,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 118,
+                "endColumnIndex": 121
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 121,
+                "endColumnIndex": 123
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 17,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 124,
+                "endColumnIndex": 125
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 126,
+                "endColumnIndex": 130
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 131,
+                "endColumnIndex": 137
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 139,
+                "endColumnIndex": 143
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 144,
+                "endColumnIndex": 150
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 13,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 151,
+                "endColumnIndex": 156
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 13,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 48,
+                "startColumnIndex": 157,
+                "endColumnIndex": 161
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 161,
+                "endColumnIndex": 368
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 17,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 59,
+                "endColumnIndex": 60
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 67,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 48,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 24,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 16,
+                "endRowIndex": 47,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 47,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 35,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 23,
+                "endRowIndex": 47,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 25,
+                "endRowIndex": 47,
+                "startColumnIndex": 114,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 121,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 49,
+                "endRowIndex": 59,
+                "startColumnIndex": 1,
+                "endColumnIndex": 3
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 51,
+                "endRowIndex": 52,
+                "startColumnIndex": 135,
+                "endColumnIndex": 140
+              }
+            ],
+            "booleanRule": {
+              "condition": {
+                "type": "TEXT_CONTAINS",
+                "values": [
+                  {
+                    "userEnteredValue": "=LOWER(\"OOO\")"
+                  }
+                ]
+              },
+              "format": {
+                "backgroundColor": {},
+                "textFormat": {
+                  "foregroundColor": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                  }
+                }
+              }
+            }
+          },
+          {
+            "ranges": [
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 3,
+                "endColumnIndex": 52
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 56,
+                "endColumnIndex": 58
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 63,
+                "endColumnIndex": 65
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 7,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 70,
+                "endColumnIndex": 73
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 75,
+                "endColumnIndex": 83
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 84,
+                "endColumnIndex": 89
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 22,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 91,
+                "endColumnIndex": 94
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 15,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 96,
+                "endColumnIndex": 102
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 103,
+                "endColumnIndex": 114
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 24,
+                "startColumnIndex": 114,
+                "endColumnIndex": 116
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 24,
+                "startColumnIndex": 117,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 118,
+                "endColumnIndex": 121
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 121,
+                "endColumnIndex": 123
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 17,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 124,
+                "endColumnIndex": 125
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 126,
+                "endColumnIndex": 130
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 131,
+                "endColumnIndex": 137
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 139,
+                "endColumnIndex": 143
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 144,
+                "endColumnIndex": 150
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 13,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 151,
+                "endColumnIndex": 156
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 13,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 48,
+                "startColumnIndex": 157,
+                "endColumnIndex": 161
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 161,
+                "endColumnIndex": 368
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 17,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 59,
+                "endColumnIndex": 60
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 67,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 48,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 24,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 16,
+                "endRowIndex": 47,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 47,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 35,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 23,
+                "endRowIndex": 47,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 25,
+                "endRowIndex": 47,
+                "startColumnIndex": 114,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 121,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 49,
+                "endRowIndex": 59,
+                "startColumnIndex": 1,
+                "endColumnIndex": 3
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 51,
+                "endRowIndex": 52,
+                "startColumnIndex": 135,
+                "endColumnIndex": 140
+              }
+            ],
+            "booleanRule": {
+              "condition": {
+                "type": "TEXT_CONTAINS",
+                "values": [
+                  {
+                    "userEnteredValue": "=LOWER(\"Internal\")"
+                  }
+                ]
+              },
+              "format": {
+                "backgroundColor": {},
+                "textFormat": {
+                  "foregroundColor": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                  }
+                }
+              }
+            }
+          },
+          {
+            "ranges": [
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 3,
+                "endColumnIndex": 52
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 56,
+                "endColumnIndex": 58
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 63,
+                "endColumnIndex": 65
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 7,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 70,
+                "endColumnIndex": 73
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 75,
+                "endColumnIndex": 83
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 84,
+                "endColumnIndex": 89
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 22,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 91,
+                "endColumnIndex": 94
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 15,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 96,
+                "endColumnIndex": 102
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 103,
+                "endColumnIndex": 114
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 24,
+                "startColumnIndex": 114,
+                "endColumnIndex": 116
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 24,
+                "startColumnIndex": 117,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 118,
+                "endColumnIndex": 121
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 121,
+                "endColumnIndex": 123
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 17,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 124,
+                "endColumnIndex": 125
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 126,
+                "endColumnIndex": 130
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 131,
+                "endColumnIndex": 137
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 139,
+                "endColumnIndex": 143
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 144,
+                "endColumnIndex": 150
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 13,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 151,
+                "endColumnIndex": 156
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 13,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 48,
+                "startColumnIndex": 157,
+                "endColumnIndex": 161
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 161,
+                "endColumnIndex": 368
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 17,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 59,
+                "endColumnIndex": 60
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 67,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 48,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 24,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 16,
+                "endRowIndex": 47,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 47,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 35,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 23,
+                "endRowIndex": 47,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 25,
+                "endRowIndex": 47,
+                "startColumnIndex": 114,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 121,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 51,
+                "endRowIndex": 52,
+                "startColumnIndex": 135,
+                "endColumnIndex": 140
+              }
+            ],
+            "booleanRule": {
+              "condition": {
+                "type": "TEXT_CONTAINS",
+                "values": [
+                  {
+                    "userEnteredValue": "=LOWER(\"TRAVEL\")"
+                  }
+                ]
+              },
+              "format": {
+                "backgroundColor": {
+                  "red": 0.2627451,
+                  "green": 0.2627451,
+                  "blue": 0.2627451
+                },
+                "textFormat": {
+                  "foregroundColor": {
+                    "red": 0.7176471,
+                    "green": 0.7176471,
+                    "blue": 0.7176471
+                  }
+                }
+              }
+            }
+          },
+          {
+            "ranges": [
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 3,
+                "endColumnIndex": 52
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 8,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 56,
+                "endColumnIndex": 58
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 8,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 63,
+                "endColumnIndex": 65
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 7,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 70,
+                "endColumnIndex": 73
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 75,
+                "endColumnIndex": 79
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 79,
+                "endColumnIndex": 80
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 26,
+                "startColumnIndex": 80,
+                "endColumnIndex": 81
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 81,
+                "endColumnIndex": 82
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 13,
+                "startColumnIndex": 82,
+                "endColumnIndex": 83
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 8,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 84,
+                "endColumnIndex": 86
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 86,
+                "endColumnIndex": 87
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 87,
+                "endColumnIndex": 89
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 22,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 91,
+                "endColumnIndex": 93
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 29,
+                "startColumnIndex": 93,
+                "endColumnIndex": 94
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 15,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 96,
+                "endColumnIndex": 101
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 17,
+                "startColumnIndex": 101,
+                "endColumnIndex": 102
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 8,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 103,
+                "endColumnIndex": 104
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 8,
+                "startColumnIndex": 104,
+                "endColumnIndex": 105
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 105,
+                "endColumnIndex": 107
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 18,
+                "startColumnIndex": 107,
+                "endColumnIndex": 108
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 8,
+                "startColumnIndex": 108,
+                "endColumnIndex": 109
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 109,
+                "endColumnIndex": 111
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 26,
+                "startColumnIndex": 111,
+                "endColumnIndex": 112
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 112,
+                "endColumnIndex": 114
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 114,
+                "endColumnIndex": 115
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 24,
+                "startColumnIndex": 115,
+                "endColumnIndex": 116
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 24,
+                "startColumnIndex": 117,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 118,
+                "endColumnIndex": 121
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 121,
+                "endColumnIndex": 122
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 24,
+                "startColumnIndex": 122,
+                "endColumnIndex": 123
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 17,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 24,
+                "startColumnIndex": 124,
+                "endColumnIndex": 125
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 35,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 126,
+                "endColumnIndex": 128
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 128,
+                "endColumnIndex": 129
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 129,
+                "endColumnIndex": 130
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 15,
+                "startColumnIndex": 131,
+                "endColumnIndex": 133
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 133,
+                "endColumnIndex": 135
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 135,
+                "endColumnIndex": 136
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 136,
+                "endColumnIndex": 137
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 139,
+                "endColumnIndex": 143
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 35,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 144,
+                "endColumnIndex": 150
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 13,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 151,
+                "endColumnIndex": 156
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 13,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 48,
+                "startColumnIndex": 157,
+                "endColumnIndex": 158
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 17,
+                "startColumnIndex": 158,
+                "endColumnIndex": 159
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 48,
+                "startColumnIndex": 159,
+                "endColumnIndex": 161
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 161,
+                "endColumnIndex": 368
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 17,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 104,
+                "endColumnIndex": 105
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 18,
+                "startColumnIndex": 108,
+                "endColumnIndex": 109
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 17,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 59,
+                "endColumnIndex": 60
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 67,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 82,
+                "endColumnIndex": 83
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 48,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 79,
+                "endColumnIndex": 80
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 86,
+                "endColumnIndex": 87
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 24,
+                "startColumnIndex": 114,
+                "endColumnIndex": 115
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 24,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 24,
+                "startColumnIndex": 121,
+                "endColumnIndex": 122
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 128,
+                "endColumnIndex": 129
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 35,
+                "startColumnIndex": 135,
+                "endColumnIndex": 136
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 16,
+                "endRowIndex": 29,
+                "startColumnIndex": 94,
+                "endColumnIndex": 95
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 16,
+                "endRowIndex": 47,
+                "startColumnIndex": 95,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 16,
+                "endRowIndex": 47,
+                "startColumnIndex": 130,
+                "endColumnIndex": 133
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 47,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 47,
+                "startColumnIndex": 101,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 24,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 48,
+                "startColumnIndex": 158,
+                "endColumnIndex": 159
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 22,
+                "startColumnIndex": 65,
+                "endColumnIndex": 66
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 66,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 107,
+                "endColumnIndex": 109
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 23,
+                "endRowIndex": 47,
+                "startColumnIndex": 65,
+                "endColumnIndex": 66
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 23,
+                "endRowIndex": 47,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 25,
+                "endRowIndex": 47,
+                "startColumnIndex": 114,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 25,
+                "endRowIndex": 35,
+                "startColumnIndex": 121,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 25,
+                "endRowIndex": 47,
+                "startColumnIndex": 124,
+                "endColumnIndex": 125
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 28,
+                "endRowIndex": 47,
+                "startColumnIndex": 80,
+                "endColumnIndex": 81
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 28,
+                "endRowIndex": 47,
+                "startColumnIndex": 111,
+                "endColumnIndex": 112
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 30,
+                "endRowIndex": 47,
+                "startColumnIndex": 93,
+                "endColumnIndex": 95
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 121,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 135,
+                "endColumnIndex": 136
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 51,
+                "endRowIndex": 52,
+                "startColumnIndex": 135,
+                "endColumnIndex": 140
+              }
+            ],
+            "booleanRule": {
+              "condition": {
+                "type": "CUSTOM_FORMULA",
+                "values": [
+                  {
+                    "userEnteredValue": "=WEEKDAY(D$1,2)=6"
+                  }
+                ]
+              },
+              "format": {
+                "backgroundColor": {
+                  "red": 0.49803922,
+                  "green": 0.49803922,
+                  "blue": 0.49803922
+                },
+                "textFormat": {
+                  "foregroundColor": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                  }
+                }
+              }
+            }
+          },
+          {
+            "ranges": [
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 3,
+                "endColumnIndex": 52
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 8,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 56,
+                "endColumnIndex": 58
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 8,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 63,
+                "endColumnIndex": 65
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 7,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 70,
+                "endColumnIndex": 73
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 75,
+                "endColumnIndex": 79
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 79,
+                "endColumnIndex": 80
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 26,
+                "startColumnIndex": 80,
+                "endColumnIndex": 81
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 81,
+                "endColumnIndex": 82
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 13,
+                "startColumnIndex": 82,
+                "endColumnIndex": 83
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 8,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 84,
+                "endColumnIndex": 86
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 86,
+                "endColumnIndex": 87
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 87,
+                "endColumnIndex": 89
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 22,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 91,
+                "endColumnIndex": 93
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 29,
+                "startColumnIndex": 93,
+                "endColumnIndex": 94
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 15,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 96,
+                "endColumnIndex": 101
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 17,
+                "startColumnIndex": 101,
+                "endColumnIndex": 102
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 8,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 103,
+                "endColumnIndex": 104
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 8,
+                "startColumnIndex": 104,
+                "endColumnIndex": 105
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 105,
+                "endColumnIndex": 107
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 18,
+                "startColumnIndex": 107,
+                "endColumnIndex": 108
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 8,
+                "startColumnIndex": 108,
+                "endColumnIndex": 109
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 109,
+                "endColumnIndex": 111
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 26,
+                "startColumnIndex": 111,
+                "endColumnIndex": 112
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 112,
+                "endColumnIndex": 114
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 114,
+                "endColumnIndex": 115
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 24,
+                "startColumnIndex": 115,
+                "endColumnIndex": 116
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 24,
+                "startColumnIndex": 117,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 118,
+                "endColumnIndex": 121
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 121,
+                "endColumnIndex": 122
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 24,
+                "startColumnIndex": 122,
+                "endColumnIndex": 123
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 17,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 24,
+                "startColumnIndex": 124,
+                "endColumnIndex": 125
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 35,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 126,
+                "endColumnIndex": 128
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 128,
+                "endColumnIndex": 129
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 129,
+                "endColumnIndex": 130
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 15,
+                "startColumnIndex": 131,
+                "endColumnIndex": 133
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 133,
+                "endColumnIndex": 135
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 135,
+                "endColumnIndex": 136
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 136,
+                "endColumnIndex": 137
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 14,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 139,
+                "endColumnIndex": 143
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 35,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 144,
+                "endColumnIndex": 150
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 13,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 151,
+                "endColumnIndex": 156
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 13,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 48,
+                "startColumnIndex": 157,
+                "endColumnIndex": 158
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 17,
+                "startColumnIndex": 158,
+                "endColumnIndex": 159
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 48,
+                "startColumnIndex": 159,
+                "endColumnIndex": 161
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 0,
+                "endRowIndex": 47,
+                "startColumnIndex": 161,
+                "endColumnIndex": 368
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 17,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 104,
+                "endColumnIndex": 105
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 18,
+                "startColumnIndex": 108,
+                "endColumnIndex": 109
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 17,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 59,
+                "endColumnIndex": 60
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 67,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 82,
+                "endColumnIndex": 83
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 48,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 79,
+                "endColumnIndex": 80
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 86,
+                "endColumnIndex": 87
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 24,
+                "startColumnIndex": 114,
+                "endColumnIndex": 115
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 24,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 24,
+                "startColumnIndex": 121,
+                "endColumnIndex": 122
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 128,
+                "endColumnIndex": 129
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 35,
+                "startColumnIndex": 135,
+                "endColumnIndex": 136
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 16,
+                "endRowIndex": 29,
+                "startColumnIndex": 94,
+                "endColumnIndex": 95
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 16,
+                "endRowIndex": 47,
+                "startColumnIndex": 95,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 16,
+                "endRowIndex": 47,
+                "startColumnIndex": 130,
+                "endColumnIndex": 133
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 47,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 47,
+                "startColumnIndex": 101,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 24,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 48,
+                "startColumnIndex": 158,
+                "endColumnIndex": 159
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 22,
+                "startColumnIndex": 65,
+                "endColumnIndex": 66
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 66,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 107,
+                "endColumnIndex": 109
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 23,
+                "endRowIndex": 47,
+                "startColumnIndex": 65,
+                "endColumnIndex": 66
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 23,
+                "endRowIndex": 47,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 25,
+                "endRowIndex": 47,
+                "startColumnIndex": 114,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 25,
+                "endRowIndex": 35,
+                "startColumnIndex": 121,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 25,
+                "endRowIndex": 47,
+                "startColumnIndex": 124,
+                "endColumnIndex": 125
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 28,
+                "endRowIndex": 47,
+                "startColumnIndex": 80,
+                "endColumnIndex": 81
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 28,
+                "endRowIndex": 47,
+                "startColumnIndex": 111,
+                "endColumnIndex": 112
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 30,
+                "endRowIndex": 47,
+                "startColumnIndex": 93,
+                "endColumnIndex": 95
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 121,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 135,
+                "endColumnIndex": 136
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 51,
+                "endRowIndex": 52,
+                "startColumnIndex": 135,
+                "endColumnIndex": 140
+              }
+            ],
+            "booleanRule": {
+              "condition": {
+                "type": "CUSTOM_FORMULA",
+                "values": [
+                  {
+                    "userEnteredValue": "=WEEKDAY(D$1,2)=7"
+                  }
+                ]
+              },
+              "format": {
+                "backgroundColor": {
+                  "red": 0.49803922,
+                  "green": 0.49803922,
+                  "blue": 0.49803922
+                },
+                "textFormat": {
+                  "foregroundColor": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                  }
+                }
+              }
+            }
+          },
+          {
+            "ranges": [
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 3,
+                "endColumnIndex": 52
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 56,
+                "endColumnIndex": 58
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 63,
+                "endColumnIndex": 65
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 7,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 70,
+                "endColumnIndex": 73
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 75,
+                "endColumnIndex": 83
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 84,
+                "endColumnIndex": 89
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 22,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 91,
+                "endColumnIndex": 94
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 15,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 96,
+                "endColumnIndex": 102
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 8,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 103,
+                "endColumnIndex": 114
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 24,
+                "startColumnIndex": 114,
+                "endColumnIndex": 116
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 24,
+                "startColumnIndex": 117,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 118,
+                "endColumnIndex": 121
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 121,
+                "endColumnIndex": 123
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 17,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 124,
+                "endColumnIndex": 125
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 126,
+                "endColumnIndex": 130
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 131,
+                "endColumnIndex": 137
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 14,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 139,
+                "endColumnIndex": 143
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 35,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 144,
+                "endColumnIndex": 150
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 13,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 151,
+                "endColumnIndex": 156
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 13,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 48,
+                "startColumnIndex": 157,
+                "endColumnIndex": 161
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 2,
+                "endRowIndex": 47,
+                "startColumnIndex": 161,
+                "endColumnIndex": 368
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 52,
+                "endColumnIndex": 56
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 58,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 13,
+                "startColumnIndex": 65,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 83,
+                "endColumnIndex": 84
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 9,
+                "endRowIndex": 47,
+                "startColumnIndex": 102,
+                "endColumnIndex": 103
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 17,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 59,
+                "endColumnIndex": 60
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 18,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 67,
+                "endColumnIndex": 70
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 47,
+                "startColumnIndex": 150,
+                "endColumnIndex": 151
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 14,
+                "endRowIndex": 48,
+                "startColumnIndex": 156,
+                "endColumnIndex": 157
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 73,
+                "endColumnIndex": 75
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 24,
+                "startColumnIndex": 116,
+                "endColumnIndex": 117
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 130,
+                "endColumnIndex": 131
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 15,
+                "endRowIndex": 47,
+                "startColumnIndex": 137,
+                "endColumnIndex": 139
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 16,
+                "endRowIndex": 47,
+                "startColumnIndex": 94,
+                "endColumnIndex": 96
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 47,
+                "startColumnIndex": 58,
+                "endColumnIndex": 59
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 18,
+                "endRowIndex": 35,
+                "startColumnIndex": 123,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 60,
+                "endColumnIndex": 63
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 19,
+                "endRowIndex": 47,
+                "startColumnIndex": 65,
+                "endColumnIndex": 67
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 23,
+                "endRowIndex": 47,
+                "startColumnIndex": 89,
+                "endColumnIndex": 91
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 25,
+                "endRowIndex": 47,
+                "startColumnIndex": 114,
+                "endColumnIndex": 118
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 121,
+                "endColumnIndex": 124
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 125,
+                "endColumnIndex": 126
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 36,
+                "endRowIndex": 47,
+                "startColumnIndex": 143,
+                "endColumnIndex": 144
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 49,
+                "endRowIndex": 59,
+                "startColumnIndex": 1,
+                "endColumnIndex": 3
+              },
+              {
+                "sheetId": 31901548,
+                "startRowIndex": 51,
+                "endRowIndex": 52,
+                "startColumnIndex": 135,
+                "endColumnIndex": 140
+              }
+            ],
+            "booleanRule": {
+              "condition": {
+                "type": "TEXT_CONTAINS",
+                "values": [
+                  {
+                    "userEnteredValue": "SAE"
+                  }
+                ]
+              },
+              "format": {
+                "backgroundColor": {
+                  "red": 0.62352943,
+                  "green": 0.77254903,
+                  "blue": 0.9098039
+                },
+                "textFormat": {
+                  "foregroundColor": {}
+                }
+              }
+            }
+          }
+        ],
+        "bandedRanges": [
+          {
+            "bandedRangeId": 1636627823,
+            "range": {
+              "sheetId": 31901548,
+              "startRowIndex": 2,
+              "endRowIndex": 48,
+              "startColumnIndex": 0,
+              "endColumnIndex": 368
+            },
+            "rowProperties": {
+              "firstBandColor": {
+                "red": 1,
+                "green": 1,
+                "blue": 1
+              },
+              "secondBandColor": {
+                "red": 0.9529412,
+                "green": 0.9529412,
+                "blue": 0.9529412
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/blah-foo-baz/edit"
+  },
+  "headers": {
+    "cache-control": "private",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-type": "application/json; charset=UTF-8",
+    "date": "Thu, 23 May 2019 18:44:25 GMT",
+    "server": "ESF",
+    "transfer-encoding": "chunked",
+    "vary": "Origin, X-Origin, Referer",
+    "x-frame-options": "SAMEORIGIN",
+    "x-xss-protection": "0"
+  },
+  "status": 200,
+  "statusText": "OK"
+}

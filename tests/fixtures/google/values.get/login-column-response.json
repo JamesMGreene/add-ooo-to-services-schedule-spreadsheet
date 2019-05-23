@@ -1,0 +1,80 @@
+{
+  "config": {
+    "url": "https://sheets.googleapis.com/v4/spreadsheets/blah-foo-baz/values/%272019-neworg%27%21B%3AB?majorDimension=COLUMNS",
+    "method": "GET",
+    "headers": {
+      "Accept-Encoding": "gzip",
+      "User-Agent": "google-api-nodejs-client/0.7.2 (gzip)",
+      "Authorization": "Bearer ya29.c.EloSBz1Y3q0GAtrk-VZtOgM8w5d2kQh5_ESduSDXaNPBiIJNTXQvYyRZ23PuOjvPpXOm2fecezC5Q2a-Stu1EiAphpIUpmX7hgt_uTSNbHeyDEpiEkghnA2HPCx",
+      "Accept": "application/json"
+    },
+    "params": {
+      "majorDimension": "COLUMNS"
+    },
+    "responseType": "json"
+  },
+  "data": {
+    "range": "'2019-neworg'!B1:B59",
+    "majorDimension": "COLUMNS",
+    "values": [
+      [
+        "",
+        "",
+        "ArtemisF",
+        "boreas",
+        "Comms",
+        "cronos",
+        "DIONYSUS",
+        "eros",
+        "FURIES",
+        "Gaia (APAC)",
+        "Hades (EMEA)",
+        "Iris",
+        "TO BE HIRED",
+        "JamesMGreene",
+        "Kratos",
+        "Leto",
+        "MEDUSA (EMEA)",
+        "Nike - Swoosh",
+        "Ouranos",
+        "Persephone (EMEA)",
+        "TO BE HIRED",
+        "TO BE HIRED",
+        "Queen of Stuff",
+        "Rhea",
+        "styx",
+        "Triton",
+        "Urania (EMEA)",
+        "Volvo is not Greek",
+        "WonderWoman is not Greek",
+        "Xanadu is not Greek",
+        "You may or may not be Greek? (EMEA)",
+        "Zeus",
+        "",
+        "Legend",
+        "Available",
+        "Available for remote engagements",
+        "Not available for engagements\n(OOO, Internal, Conference, etc.)",
+        "[O] Onsite, Confirmed",
+        "[R] Remote, Confirmed",
+        "[HO] Onsite, Hold",
+        "[HR] Remote, Hold",
+        "SAE Slot"
+      ]
+    ]
+  },
+  "headers": {
+    "cache-control": "private",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-type": "application/json; charset=UTF-8",
+    "date": "Thu, 23 May 2019 16:52:12 GMT",
+    "server": "ESF",
+    "transfer-encoding": "chunked",
+    "vary": "Origin, X-Origin, Referer",
+    "x-frame-options": "SAMEORIGIN",
+    "x-xss-protection": "0"
+  },
+  "status": 200,
+  "statusText": "OK"
+}
